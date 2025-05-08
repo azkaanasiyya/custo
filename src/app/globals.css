@@ -119,4 +119,81 @@
   body {
     @apply bg-background text-foreground;
   }
+  .typography {
+    h1 {
+      @apply text-[56px] leading-[120%] font-semibold;
+    }
+    h2 {
+      @apply text-[48px] leading-[120%] font-semibold;
+    }
+    h3 {
+      @apply text-[40px] leading-[120%] font-semibold;
+    }
+    h4 {
+      @apply text-[24px] leading-[120%] font-semibold;
+    }
+  }
+}
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+
+  --color-primary-100: #e1f7ed;
+  --color-primary-200: #47d8a9;
+  --color-primary-300: #56cea7;
+  --color-primary-400: #2bbd8e;
+  --color-primary-500: #00ad75;
+  --color-primary-600: #008a5e;
+
+  --color-grayscale-50: #f8fafc;
+  --color-grayscale-100: #f1f4f8;
+  --color-grayscale-200: #e3e8ef;
+  --color-grayscale-300: #cdd5e0;
+  --color-grayscale-400: #97a3b6;
+  --color-grayscale-500: #677489;
+  --color-grayscale-600: #525866;
+  --color-grayscale-700: #364153;
+  --color-grayscale-800: #20293a;
+  --color-grayscale-900: #111729;
+  --color-grayscale-950: #0e121b;
+
+  --color-success-100: #def5ed;
+  --color-success-200: #c6eee1;
+  --color-success-300: #87dcc0;
+  --color-success-400: #42d0a1;
+  --color-success-500: #049f6c;
+  --color-success-600: #096b4b;
+
+  --color-warning-100: #fff6e0;
+  --color-warning-200: #ffebc9;
+  --color-warning-300: #ffdea6;
+  --color-warning-400: #ffbe4c;
+  --color-warning-500: #f29c06;
+  --color-warning-600: #c17c03;
+
+  --color-info-100: #ebf2fe;
+  --color-info-200: #d8e6fd;
+  --color-info-300: #9dc1fb;
+  --color-info-400: #71a4f5;
+  --color-info-500: #3b82f6;
+  --color-info-600: #0950c3;
+
+  --color-danger-100: #fff0f3;
+  --color-danger-200: #fadbe1;
+  --color-danger-300: #ed8296;
+  --color-danger-400: #f54b6b;
+  --color-danger-500: #df1c41;
+  --color-danger-600: #841127;
+
+  --text-small: 12px;
+  --text-small--line-height: 150%;
+
+  --text-medium: 14px;
+  --text-medium--line-height: 150%;
+
+  --text-large: 16px;
+  --text-large--line-height: 150%;
+
+  --text-xlarge: 18px;
+  --text-xlarge--line-height: 150%;
 }
