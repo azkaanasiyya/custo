@@ -5,7 +5,7 @@ export default function About() {
             <div className="container max-w-[1072px] flex flex-col gap-[64px]">
                 <div className="header flex flex-row justify-between items-end">
                     <div className="typography w-[435px]">
-                        <h2>Guided by Purpose and Principles</h2>
+                        <h3>Guided by Purpose and Principles</h3>
                     </div>
                     <p className="text-xlarge text-grayscale-600 max-w-[526px]">Our principles shape every decision we make. They reflect who we are and how we aim to make a meaningful difference.</p>
                 </div>

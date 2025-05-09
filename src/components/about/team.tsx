@@ -7,7 +7,7 @@ export default function AboutTeam() {
       <div className="container max-w-[1072px] flex flex-col justify-center items-center gap-16">
         <div className="header flex flex-col justify-center items-center gap-4 max-w-[708px]">
           <div className="typography text-grayscale-950 font-semibold">
-            <h2>The Peoples Behind Custo</h2>
+            <h3>The Peoples Behind Custo</h3>
           </div>
           <p className="text-xlarge text-grayscale-600">
             Together, we turn bold ideas into powerful tools for modern businesses.

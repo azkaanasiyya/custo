@@ -8,7 +8,7 @@ export default function AboutQuote() {
                 <div className="content flex flex-col gap-8 max-w-[526px]">
                     <div className="top flex flex-col gap-4">
                         <div className="typography font-semibold text-grayscale-950">
-                            <h2>Together, We Grow Better</h2>
+                            <h3>Together, We Grow Better</h3>
                         </div>
                         <p className="text-xlarge text-grayscale-600">“At Custo, we believe growth is not a solo journey. Every step we take is in collaboration with those we serve and that’s what makes the journey meaningful. We&apos;re here to grow with you, every step of the way.”</p>
                     </div>
