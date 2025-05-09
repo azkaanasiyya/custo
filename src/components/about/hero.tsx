@@ -11,26 +11,26 @@ export default function AboutHero() {
             </div>
             <div className="content grid grid-cols-3 gap-[20px]">
               <div className="flex flex-col gap-[20px]">
-                <Image src="/content1.svg" alt="content" width={344} height={198} />
-                <Image src="/content2.svg" alt="content" width={344} height={198} />
+                <Image src="content/content1.svg" alt="content" width={344} height={198} />
+                <Image src="content/content2.svg" alt="content" width={344} height={198} />
               </div>
               <div>
-                <Image src="/content3.svg" alt="content" width={344} height={416} />
+                <Image src="content/content3.svg" alt="content" width={344} height={416} />
               </div>
               <div className="flex flex-col gap-[20px]">
-                <Image src="/content4.svg" alt="content" width={344} height={198} />
-                <Image src="/content5.svg" alt="content" width={344} height={198} />
+                <Image src="content/content4.svg" alt="content" width={344} height={198} />
+                <Image src="content/content5.svg" alt="content" width={344} height={198} />
               </div>
             </div>
             <div className="clients flex flex-col gap-[32px] pt-[8px] justify-center items-center">
               <p className="text-xlarge text-grayscale-600">Trusted by companies around the world</p>
               <div className="flex flex-row opacity-40 gap-[64px]">
-                <Image src="/client1.svg" alt="client" width={154} height={28} />
-                <Image src="/client2.svg" alt="client" width={154} height={28} />
-                <Image src="/client3.svg" alt="client" width={154} height={28} />
-                <Image src="/client4.svg" alt="client" width={154} height={28} />
-                <Image src="/client5.svg" alt="client" width={154} height={28} />
-                <Image src="/client6.svg" alt="client" width={154} height={28} />
+                <Image src="client/client1.svg" alt="client" width={154} height={28} />
+                <Image src="client/client2.svg" alt="client" width={154} height={28} />
+                <Image src="client/client3.svg" alt="client" width={154} height={28} />
+                <Image src="client/client4.svg" alt="client" width={154} height={28} />
+                <Image src="client/client5.svg" alt="client" width={154} height={28} />
+                <Image src="client/client6.svg" alt="client" width={154} height={28} />
               </div>
             </div>
         </div>
