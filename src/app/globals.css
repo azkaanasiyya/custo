@@ -121,17 +121,23 @@
   }
   .typography {
     h1 {
-      @apply text-[56px] leading-[120%] font-semibold;
+      @apply font-sans text-[56px] leading-[120%] font-semibold;
     }
     h2 {
-      @apply text-[40px] leading-[120%] font-semibold;
+      @apply font-sans text-[48px] leading-[120%] font-semibold;
     }
     h3 {
-      @apply text-[40px] leading-[120%] font-semibold;
+      @apply font-sans text-[40px] leading-[120%] font-semibold;
     }
     h4 {
-      @apply text-[24px] leading-[120%] font-semibold;
+      @apply font-sans text-[24px] leading-[120%] font-semibold;
     }
+  }
+  .text-l {
+    @apply font-sans font-normal text-[1rem] leading-[160%];
+  }
+  .text-xl {
+    @apply font-sans font-normal text-[1.125rem] leading-[160%];
   }
 }
 
@@ -163,6 +169,7 @@
   --color-success-400: #42d0a1;
   --color-success-500: #049f6c;
   --color-success-600: #096b4b;
+  --color-success-700: #9DE2CD;
 
   --color-warning-100: #fff6e0;
   --color-warning-200: #ffebc9;
