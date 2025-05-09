@@ -6,7 +6,7 @@ export default function AboutQuote() {
             <div className="container max-w-[1072px] flex flex-row justify-between items-center">
                 <Image src="quote.svg" alt="quote" width={435} height={400} />
                 <div className="content flex flex-col gap-8 max-w-[526px]">
-                    <div className="top flex flex-col gap-4">
+                    <div className="header flex flex-col gap-4">
                         <div className="typography font-semibold text-grayscale-950">
                             <h3>Together, We Grow Better</h3>
                         </div>
