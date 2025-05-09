@@ -5,7 +5,7 @@ export default function AboutHero() {
         <div className="container max-w-[1072px] flex flex-col gap-[64px] items-center justify-center">
             <div className="header flex flex-col gap-[16px] items-center">
                 <div className="typography text-grayscale-950">
-                  <h1>About Custo</h1>
+                  <h2>About Custo</h2>
                 </div>
                 <p className="text-xlarge max-w-[656px] text-center text-gray-600">Custo is a team of passionate makers dedicated to building tools that empower businesses to grow.</p>
             </div>
