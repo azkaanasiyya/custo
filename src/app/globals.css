@@ -119,6 +119,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  .container {
+    @apply w-full max-w-[67rem];
+  }
   .typography {
     h1 {
       @apply font-sans text-[56px] leading-[120%] font-semibold;
@@ -132,6 +135,9 @@
     h4 {
       @apply font-sans text-[24px] leading-[120%] font-semibold;
     }
+  }
+  .text-m {
+    @apply font-sans font-normal text-[0.875rem] leading-[160%];
   }
   .text-l {
     @apply font-sans font-normal text-[1rem] leading-[160%];
@@ -169,7 +175,7 @@
   --color-success-400: #42d0a1;
   --color-success-500: #049f6c;
   --color-success-600: #096b4b;
-  --color-success-700: #9DE2CD;
+  --color-success-700: #9de2cd;
 
   --color-warning-100: #fff6e0;
   --color-warning-200: #ffebc9;
