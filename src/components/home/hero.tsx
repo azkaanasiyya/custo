@@ -17,7 +17,7 @@ export default function HomeHero() {
             <h1 className="font-sans font-semibold">
               Powerful CRM Solutions for Growing Businesses
             </h1>
-            <p className="font-sans font-normal text-[1.125rem] leading-[160%] max-w-[41rem] mx-auto text-grayscale-600">
+            <p className="text-xl-regular max-w-[41rem] mx-auto text-grayscale-600">
               Streamline your customer relationships with an intuitive CRM
               platform. Optimize workflows, and drive business growth with ease.
             </p>
