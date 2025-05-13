@@ -11,7 +11,7 @@ export default function Features1() {
             description="Scale your business effortlessly with a powerful and intuitive CRM solutions."
           />
         </div>
-        <div className="flex flex-row justify-between items-center p-[2.5rem] rounded-[1.25rem] border border-gray-200 shadow-[0_0_8px_rgba(0,0,0,0.6)] gap-[2.5rem]">
+        <div className="flex flex-row justify-between items-center p-[2.5rem] rounded-[1.25rem] border border-gray-200 shadow-[0_0_8px_rgba(0,0,0,0.10)] gap-[2.5rem]">
           <div className="flex flex-col gap-[2rem]">
             <Image
               src="/image/Image.svg"
