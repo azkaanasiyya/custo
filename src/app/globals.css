@@ -142,8 +142,11 @@
   .text-l {
     @apply font-sans font-normal text-[1rem] leading-[160%];
   }
-  .text-xl {
+  .text-xl-regular {
     @apply font-sans font-normal text-[1.125rem] leading-[160%];
+  }
+  .text-xl-medium {
+    @apply font-sans font-medium text-[1.125rem] leading-[160%];
   }
 }
 
