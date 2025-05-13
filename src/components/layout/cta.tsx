@@ -7,7 +7,7 @@ export default function CTA() {
                 <Header
                     title="Start Growing with Custo Now"
                     description="Take control of your sales pipeline, automate tasks, and build stronger customer relationships with ease."
-                    className="max-w-[34.4375rem] text-center"
+                    className="max-w-[576px] text-center"
                 />
                 <Button variant="primary" size="base">Start for Free</Button>
             </div>
