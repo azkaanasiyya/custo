@@ -32,7 +32,7 @@ export default function HomeHero() {
           <div className="flex flex-row gap-[1rem]">
             <Image src="/icon/List.svg" alt="list" width={72} height={32} />
             <div className="w-full max-w-[12.625rem]">
-              <p className="text-l text-grayscale-600">
+              <p className="text-l-regular text-grayscale-600">
                 Trusted by 3K+ companies around the world
               </p>
             </div>
@@ -48,7 +48,7 @@ export default function HomeHero() {
                 width={116}
                 height={20}
               ></Image>
-              <p className="text-l text-grayscale-600">Based on 200+ reviews</p>
+              <p className="text-l-regular text-grayscale-600">Based on 200+ reviews</p>
             </div>
           </div>
         </div>

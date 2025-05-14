@@ -24,4 +24,40 @@ export const blogPosts: BlogPost[] = [
         description: "A Practical Guide to Organizing Your CRM Data Effectively",
         image: "blog/practical.svg",
     },
+    {
+        date: "Mar 30, 2025",
+        type: "Product Tips",
+        description: "Common CRM Mistakes and How to Avoid Them Effectively",
+        image: "blog/common.svg",
+    },
+    {
+        date: "Mar 22, 2025",
+        type: "Company Updates",
+        description: "Custo’s Commitment to Data Security and Transparency",
+        image: "blog/commitment.svg",
+    },
+    {
+        date: "Mar 14, 2025",
+        type: "Company Updates",
+        description: "Inside Our Decision to Redesign the Custo Interface",
+        image: "blog/inside.svg",
+    },
+    {
+        date: "Mar 5, 2025",
+        type: "Customer Success",
+        description: "How This Startup Increased Sales by 40 Percent with Custo",
+        image: "blog/startup.svg",
+    },
+    {
+        date: "Feb 28, 2025",
+        type: "Customer Success",
+        description: "Scaling Operations Seamlessly with Smart Automation",
+        image: "blog/scaling.svg",
+    },
+    {
+        date: "Feb 20, 20255",
+        type: "CRM Strategy",
+        description: "How a CRM Can Improve Team Collaboration and Transparency",
+        image: "blog/crm.svg",
+    },
 ]

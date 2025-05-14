@@ -139,7 +139,7 @@
   .text-m {
     @apply font-sans font-normal text-[0.875rem] leading-[160%];
   }
-  .text-l {
+  .text-l-regular {
     @apply font-sans font-normal text-[1rem] leading-[160%];
   }
   .text-xl-regular {

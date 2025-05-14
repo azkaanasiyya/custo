@@ -24,9 +24,9 @@ export default function Navbar() {
               </a>
             </li>
             <li className="px-3 py-2">
-              <a href="/contact" className="text-grayscale-950">
-                Blog
-              </a>
+              <Link href="/blog">
+                <p className="text-grayscale-950">Blog</p>
+              </Link>
             </li>
           </ul>
           <div className="flex gap-3">

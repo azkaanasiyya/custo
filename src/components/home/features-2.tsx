@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Features2() {
   return (
     <div className="flex w-full justify-center">
-      <div className="flex flex-col gap-[3rem] w-full max-w-[67rem] py-[6.5rem]">
+      <div className="flex flex-col gap-[5rem] w-full max-w-[67rem] py-[6.5rem]">
         <div className="grid grid-cols-2 items-center gap-[1.25rem]">
           <Image src="/features/Image.svg" alt="" width={454} height={440} />
           <div className="flex flex-col gap-[1rem]">
