@@ -19,9 +19,9 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="px-3 py-2">
-              <Link href="/pricing">
-                <p className="text-grayscale-950">Pricing</p>
-              </Link>
+              <a href="/pricing" className="text-grayscale-950 ">
+                Pricing
+              </a>
             </li>
             <li className="px-3 py-2">
               <Link href="/blog">
