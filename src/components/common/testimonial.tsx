@@ -2,7 +2,7 @@ import Header from "@/components/common/header";
 import Image from "next/image";
 import testimonials from "../data/testimonials";
 
-export default function AboutTestimonial() {
+export default function Testimonial() {
     return (
         <div className="testimonial-section py-[6.5rem] px-[1rem] flex flex-col justify-center items-center">
             <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
