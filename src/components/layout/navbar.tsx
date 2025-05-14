@@ -19,14 +19,14 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="px-3 py-2">
-              <a href="/about" className="text-grayscale-950 ">
-                Pricing
-              </a>
+              <Link href="/pricing">
+                <p className="text-grayscale-950">Pricing</p>
+              </Link>
             </li>
             <li className="px-3 py-2">
-              <a href="/blogs" className="text-grayscale-950">
-                Blog
-              </a>
+              <Link href="/blogs">
+                <p className="text-grayscale-950">Blog</p>
+              </Link>
             </li>
           </ul>
           <div className="flex gap-3">
