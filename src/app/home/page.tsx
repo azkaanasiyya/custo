@@ -11,7 +11,6 @@ export default function HomePage() {
       <HomeStats />
       <Features1 />
       <Features2 />
-      <
       <FAGs/>
     </div>
   );
