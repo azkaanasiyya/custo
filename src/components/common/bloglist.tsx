@@ -1,11 +1,16 @@
 import { blogPosts } from "../data/blog";
 import Image from "next/image";
 
-export default function BlogList() {
+interface BlogListProps {
+  limit?: number;
+}
+
+export default function BlogList({ limit }: BlogListProps) {
+    const postToDisplay = limit ? blogPosts.slice(0, limit) : blogPosts;
   return (
     <>
       <div className="blog grid grid-cols-3 gap-[1.25rem]">
-        {blogPosts.map((blog, index) => (
+        {postToDisplay.map((blog, index) => (
           <div key={index} className="flex flex-col gap-[1.5rem]">
             <Image src={blog.image} alt={blog.type} width={344} height={280} />
             <div className="flex flex-col gap-[1rem]">

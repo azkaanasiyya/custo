@@ -1,6 +1,7 @@
 import Header from "@/components/common/header";
 import { Button } from "../ui/button";
 import BlogList from "../common/bloglist";
+import Link from "next/link";
 
 export default function AboutBlog() {
   return (
@@ -10,10 +11,12 @@ export default function AboutBlog() {
           title="The Custo Journal"
           description="Get insights and news to scale your business with confidence."
         />
-        <BlogList />
-        <Button variant="Secondary" size="small">
-          Explore More
-        </Button>
+        <BlogList limit={3} />
+        <Link href="/blog">
+          <Button variant="Secondary" size="small">
+            Explore More
+          </Button>
+        </Link>
       </div>
     </div>
   );
