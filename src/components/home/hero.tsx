@@ -8,7 +8,7 @@ export default function HomeHero() {
       <div className="flex flex-col gap-[3rem] w-full max-w-[67rem] pt-[9.5rem]">
         <div className="flex flex-col gap-[2rem] items-center">
           <button className="inline-flex items-center gap-[0.5rem] rounded-[5rem] bg-radial-[at_0%_0%] from-success-700 to-success-700/50 to-99% px-[1rem] py-[2,8125rem] border-[0.5px] border-white/40">
-            <span className="font-sans font-medium text-[0.75rem] leading-[160%] text-gr">
+            <span className="font-sans font-medium text-small leading-[160%] text-gr">
               Introducing Custo
             </span>
             <ArrowRight size="0.75rem" />
