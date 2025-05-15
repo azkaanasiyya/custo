@@ -7,12 +7,12 @@ export default function Navbar() {
     <nav className="py-6 absolute top-0 w-full z-100">
       <div className="w-full max-w-[1072px] mx-auto ">
         <div className="flex items-center justify-between gap-10">
-          <div>
+          <div className="cursor-pointer">
             <Link href="/">
               <Image src="/logo/Logo.svg" alt="Logo" width={92} height={24} />
             </Link>
           </div>
-          <ul className="flex flex-1 justify-start gap-2">
+          <ul className="flex flex-1 justify-start gap-2 cursor-pointer">
             <li className="px-3 py-2">
               <Link href="/about">
                 <p className="text-grayscale-950">About</p>
@@ -31,12 +31,12 @@ export default function Navbar() {
           </ul>
           <div className="flex gap-3">
             <Link href="/contact">
-              <Button variant="Secondary" size="small">
+              <Button variant="Secondary" size="small" className="cursor-pointer"> 
                 Contact Sales
               </Button>
             </Link>
             
-            <Button variant="primary" size="small">
+            <Button variant="primary" size="small" className="cursor-pointer">
               Start for Free
             </Button>
           </div>
