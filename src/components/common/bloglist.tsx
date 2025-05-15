@@ -1,17 +1,19 @@
 import { blogPosts } from "../data/blog";
 import Image from "next/image";
+import Link from "next/link";
 
 interface BlogListProps {
   limit?: number;
 }
 
 export default function BlogList({ limit }: BlogListProps) {
-    const postToDisplay = limit ? blogPosts.slice(0, limit) : blogPosts;
+  const postToDisplay = limit ? blogPosts.slice(0, limit) : blogPosts;
+
   return (
-    <>
-      <div className="blog grid grid-cols-3 gap-[1.25rem]">
-        {postToDisplay.map((blog, index) => (
-          <div key={index} className="flex flex-col gap-[1.5rem]">
+    <div className="blog grid grid-cols-3 gap-[1.25rem]">
+      {postToDisplay.map((blog, index) => (
+        <Link key={index} href={`/blog/${blog.slug}`} passHref>
+          <div className="flex flex-col gap-[1.5rem] cursor-pointer hover:opacity-90">
             <Image src={blog.image} alt={blog.type} width={344} height={280} />
             <div className="flex flex-col gap-[1rem]">
               <p className="text-xlarge text-grayscale-950 font-medium">
@@ -24,8 +26,8 @@ export default function BlogList({ limit }: BlogListProps) {
               </div>
             </div>
           </div>
-        ))}
-      </div>
-    </>
+        </Link>
+      ))}
+    </div>
   );
 }

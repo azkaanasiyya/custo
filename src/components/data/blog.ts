@@ -1,11 +1,14 @@
-export type BlogPost = {
+import { generateSlugBlog } from "@/lib/utils/generateSlugBlog";
+
+export type BlogPostProps = {
   date: string;
   type: string;
   title: string;
   image: string;
+  slug?: string;
 };
 
-export const blogPosts: BlogPost[] = [
+export const rawBlogPosts = [
   {
     date: "Apr 7, 2025",
     type: "CRM Strategy",
@@ -62,3 +65,8 @@ export const blogPosts: BlogPost[] = [
     image: "/blog/crm.svg",
   },
 ];
+
+export const blogPosts: BlogPostProps[] = rawBlogPosts.map((post) => ({
+  ...post,
+  slug: generateSlugBlog(post.title),
+}));
