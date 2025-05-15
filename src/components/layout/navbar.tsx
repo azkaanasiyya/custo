@@ -30,9 +30,12 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="flex gap-3">
-            <Button variant="Secondary" size="small">
-              Contact Sales
-            </Button>
+            <Link href="/contact">
+              <Button variant="Secondary" size="small">
+                Contact Sales
+              </Button>
+            </Link>
+            
             <Button variant="primary" size="small">
               Start for Free
             </Button>
