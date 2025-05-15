@@ -6,7 +6,7 @@ export default function HeaderBlogDetail() {
   return (
     <div className="flex w-full justify-center">
       <div className="flex flex-col gap-[2rem] w-full max-w-[67rem] pt-[9rem] pb-[3rem]">
-        <Link href="/blogs">
+        <Link href="/blog">
           <div className="flex flex-row gap-[0.5rem] items-center">
             <ArrowLeft height={20} width={20} />
             <p className="font-sans font-medium text-[0.875rem] leading-[160%] text-grayscale-900">
