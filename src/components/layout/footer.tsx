@@ -6,14 +6,14 @@ export default function Footer() {
                 <div className="top py-16 flex flex-row justify-between">
                     <div className="top-left flex flex-col gap-6">
                         <div className="flex flex-col gap-3 max-w-[16rem]">
-                            <Image src="logo/logo-footer.svg" alt="footer" width={92} height={24} />
+                            <Image src="/logo/logo-footer.svg" alt="footer" width={92} height={24} />
                             <p className="text-medium text-white opacity-[72%]">Simplify customer relationships and scale your business with Custo.</p>
                         </div>
                         <div className="flex flex-row gap-2">
-                            <Image src="icon/linkedin.svg" alt="sosmed" width={24} height={24} />
-                            <Image src="icon/fb.svg" alt="sosmed" width={24} height={24} />
-                            <Image src="icon/ig.svg" alt="sosmed" width={24} height={24} />
-                            <Image src="icon/yt.svg" alt="sosmed" width={24} height={24} />
+                            <Image src="/icon/linkedin.svg" alt="sosmed" width={24} height={24} />
+                            <Image src="/icon/fb.svg" alt="sosmed" width={24} height={24} />
+                            <Image src="/icon/ig.svg" alt="sosmed" width={24} height={24} />
+                            <Image src="/icon/yt.svg" alt="sosmed" width={24} height={24} />
                         </div>
                     </div>
                     <div className="top-right grid grid-cols-3 gap-[7.5rem]">
@@ -49,7 +49,7 @@ export default function Footer() {
                     <p className="text-medium font-normal text-white">2025 © Custo</p>
                     <div className="flex flex-row gap-2">
                         <a href="#" className="text-medium font-normal text-white">Get this template</a>
-                        <Image src="icon/arrow.svg" alt="arrow" width={12} height={12} />
+                        <Image src="/icon/arrow.svg" alt="arrow" width={12} height={12} />
                     </div>
                 </div>
             </div>
