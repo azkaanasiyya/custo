@@ -14,7 +14,7 @@ export default function Blogs() {
     <div className="flex w-full justify-center">
       <div className="flex flex-col w-full max-w-[67rem]">
         <HeaderBlogDetail slug={slug} />
-        <ImageBlogDetail />
+        <ImageBlogDetail slug={slug}/>
         <ContentBlogDetail />
         <MoreBlogDetail />
       </div>
