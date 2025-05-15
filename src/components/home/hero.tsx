@@ -23,7 +23,7 @@ export default function HomeHero() {
             </p>
           </div>
           <div>
-            <Button variant="primary" size="base">
+            <Button variant="primary" size="base" className="cursor-pointer">
               Start for Free
             </Button>
           </div>
