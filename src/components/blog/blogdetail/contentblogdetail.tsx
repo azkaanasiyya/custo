@@ -21,7 +21,7 @@ export default function ContentBlogDetail() {
             efficient. With all contact details, communication history, and deal
             progress in one place, your team can respond faster and build
           </p>
-          <div className="relative w-full aspect-[5/3]">
+          <div className="relative w-full h-[30.125rem]">
             <Image
               src="/blogdetails/effective1.svg"
               alt="Description of the image"
