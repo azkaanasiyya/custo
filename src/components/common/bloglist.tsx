@@ -15,7 +15,7 @@ export default function BlogList({ limit }: BlogListProps) {
             <Image src={blog.image} alt={blog.type} width={344} height={280} />
             <div className="flex flex-col gap-[1rem]">
               <p className="text-xlarge text-grayscale-950 font-medium">
-                {blog.description}
+                {blog.title}
               </p>
               <div className="flex flex-row gap-[1rem]">
                 <p className="text-large text-grayscale-600">{blog.date}</p>
