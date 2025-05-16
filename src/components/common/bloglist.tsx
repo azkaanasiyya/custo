@@ -4,10 +4,15 @@ import Link from "next/link";
 
 interface BlogListProps {
   limit?: number;
+  data?: typeof blogPosts;
 }
 
-export default function BlogList({ limit }: BlogListProps) {
-  const postToDisplay = limit ? blogPosts.slice(0, limit) : blogPosts;
+export default function BlogList({ limit, data }: BlogListProps) {
+  const postToDisplay = data
+    ? data
+    : limit
+    ? blogPosts.slice(0, limit)
+    : blogPosts;
 
   return (
     <div className="blog grid grid-cols-3 gap-[1.25rem]">
