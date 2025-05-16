@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="py-6 absolute top-0 w-full z-100">
+    <nav className="py-6 px-12 lg:px-0 absolute top-0 w-full z-100">
       <div className="w-full max-w-[1072px] mx-auto ">
         <div className="flex items-center justify-between gap-10">
           <div className="cursor-pointer">

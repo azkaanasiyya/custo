@@ -1,11 +1,11 @@
 import Image from "next/image";
 export default function Footer() {
     return (
-        <div className="footer bg-[url('/background/bg-footer.svg')] bg-no-repeat bg-center px-16 flex flex-col justify-center items-center">
+        <div className="footer bg-[url('/background/bg-footer.svg')] bg-no-repeat bg-center px-12 lg:px-16 flex flex-col justify-center items-center">
             <div className="container max-w-[67rem] flex flex-col">
-                <div className="top py-16 flex flex-row justify-between">
+                <div className="top py-10 lg:py-16 flex flex-row justify-between">
                     <div className="top-left flex flex-col gap-6">
-                        <div className="flex flex-col gap-3 max-w-[16rem]">
+                        <div className="flex flex-col gap-3 max-w-[246px] lg:max-w-[16rem]">
                             <Image src="/logo/logo-footer.svg" alt="footer" width={92} height={24} />
                             <p className="text-medium text-white opacity-[72%]">Simplify customer relationships and scale your business with Custo.</p>
                         </div>
@@ -16,7 +16,7 @@ export default function Footer() {
                             <Image src="/icon/yt.svg" alt="sosmed" width={24} height={24} />
                         </div>
                     </div>
-                    <div className="top-right grid grid-cols-3 gap-[7.5rem]">
+                    <div className="top-right grid grid-cols-3 justify-between min-w-[20.9rem] lg:max-w-0 lg:gap-[7.5rem]">
                         <div className="flex flex-col gap-4">
                             <p className="text-large text-white">Quick Links</p>
                             <ul className="text-medium text-white opacity-[72%] space-y-3">
