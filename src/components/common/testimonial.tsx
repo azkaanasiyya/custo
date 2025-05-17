@@ -4,7 +4,7 @@ import testimonials from "../data/testimonials";
 
 export default function Testimonial() {
     return (
-        <div className="testimonial-section py-[6.5rem] px-[1rem] flex flex-col justify-center items-center">
+        <div className="testimonial-section py-20 px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center">
             <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
                 <Header
                     title="Real Stories from Real Users"

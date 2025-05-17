@@ -2,17 +2,20 @@ import Image from "next/image";
 
 export default function About() {
     return (
-        <div className="about-section px-[4rem] py-[6.5rem] flex flex-col justify-center items-center">
-            <div className="container max-w-[67rem] flex flex-col gap-[4rem]">
-                <div className="header flex flex-row justify-between items-end">
-                    <div className="typography w-[27.1875rem]">
-                        <h3>Guided by Purpose and Principles</h3>
+        <div className="about-section py-20 px-12 lg:px-[4rem] lg:py-[6.5rem] flex flex-col justify-center items-center">
+            <div className="container w-full mx-auto max-w-[67rem] flex flex-col gap-16 items-start lg:items-center lg:justify-center">
+                <div className="header flex flex-col gap-4 lg:flex-row justify-between lg:items-end">
+                    <div className="typography lg:w-[27.1875rem]">
+                        <h3 className="text-[36px] leading-[140%] font-semibold lg:text-[40px]">
+                        Guided by Purpose and Principles
+                        </h3>
                     </div>
                     <p className="text-xlarge text-grayscale-600 max-w-[32.875rem]">
                         Our principles shape every decision we make. They reflect who we are and how we aim to make a meaningful difference.
                     </p>
                 </div>
-                <div className="list grid grid-cols-3 rounded-[1.25rem] border shadow-sm border-grayscale-200">
+
+                <div className="list grid grid-cols-2 lg:grid-cols-3 rounded-[1.25rem] border shadow-sm border-grayscale-200">
                     <div className="flex flex-col p-[2.5rem] gap-[1.5rem] border-r">
                         <Image src="/user.svg" alt="list" width={48} height={48} />
                         <div className="flex flex-col gap-[0.75rem]">
@@ -35,7 +38,7 @@ export default function About() {
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col p-[2.5rem] gap-[1.5rem]">
+                    <div className="flex flex-col border-t p-[2.5rem] gap-[1.5rem] col-span-2 lg:col-span-1 lg:border-t-0 lg:border-l">
                         <Image src="/shield.svg" alt="list" width={48} height={48} />
                         <div className="flex flex-col gap-[0.75rem]">
                             <div className="typography text-grayscale-950">
