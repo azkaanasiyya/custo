@@ -4,6 +4,7 @@ import ContentBlogDetail from "@/components/blog/blogdetail/contentblogdetail";
 import HeaderBlogDetail from "@/components/blog/blogdetail/headerblogdetail";
 import ImageBlogDetail from "@/components/blog/blogdetail/imageblogdetail";
 import MoreBlogDetail from "@/components/blog/blogdetail/moreblogdetail";
+import CTA from "@/components/layout/cta";
 import { useParams } from "next/navigation";
 
 export default function Blogs() {
@@ -17,6 +18,7 @@ export default function Blogs() {
         <ImageBlogDetail slug={slug}/>
         <ContentBlogDetail />
         <MoreBlogDetail />
+        <CTA/>
       </div>
     </div>
   );
