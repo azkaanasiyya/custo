@@ -8,7 +8,7 @@ export default function PricingHero() {
       <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-10">
         
         <div className="header flex flex-col gap-4 justify-center items-center">
-          <h1 className="text-[32px] md:text-[48px] lg:text-[56px] leading-[120%] font-semibold text-grayscale-950 text-center max-w-[550px]">
+          <h1 className="text-h1 md:text-[48px] lg:text-[56px] leading-[120%] font-semibold text-grayscale-950 text-center max-w-[550px]">
             Designed for Sustainable Growth
           </h1>
           <p className="text-large md:text-xlarge max-w-[41rem] text-center text-gray-600">
