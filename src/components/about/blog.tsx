@@ -6,16 +6,21 @@ import BlogList from "../common/bloglist";
 import Link from "next/link";
 
 export default function AboutBlog() {
-  const isTabletOrBelow = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+  const isTablet = useMediaQuery({ query: "(min-width: 641px) and (max-width: 1024px)" });
+
+  let limit = 3;
+  if (isMobile) limit = 1;
+  else if (isTablet) limit = 2;
 
   return (
-    <div className="blog-section py-20 px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center">
+    <div className="blog-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-4 flex flex-col justify-center items-center">
       <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
         <Header
           title="The Custo Journal"
           description="Get insights and news to scale your business with confidence."
         />
-        <BlogList limit={isTabletOrBelow ? 2 : 3} />
+        <BlogList limit={limit} />
         <Link href="/blog">
           <Button variant="Secondary" size="small">
             Explore More
