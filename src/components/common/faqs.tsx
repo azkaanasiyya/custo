@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Header from "@/components/common/header";
+import { faqs } from "../data/faqs";
 
 export default function FAQs() {
   return (
@@ -21,7 +22,13 @@ export default function FAQs() {
               collapsible
               className="w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-10"
             >
-              <AccordionItem value="item-1">
+              {faqs.map((faq) => (
+                <AccordionItem value={faq.value} key={faq.value}>
+                  <AccordionTrigger>{faq.title}</AccordionTrigger>
+                  <AccordionContent>{faq.description}</AccordionContent>
+                </AccordionItem>
+              ))}
+              {/* <AccordionItem value="item-1">
                 <AccordionTrigger>
                   How do I get started with Custo?
                 </AccordionTrigger>
@@ -87,7 +94,7 @@ export default function FAQs() {
                   limited, but you’ll never lose important info when changing or
                   downgrading your plan.
                 </AccordionContent>
-              </AccordionItem>
+              </AccordionItem> */}
             </Accordion>
           </div>
         </div>
