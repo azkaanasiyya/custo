@@ -13,7 +13,7 @@ export default function HomeStats() {
               {stat.value}
             </h2>
             <div className="flex flex-col gap-2 items-center">
-              <h4 className="font-sans font-semibold leading-[140%] md:text-[1.25rem] lg:text-[1.5rem]">
+              <h4 className="font-sans font-semibold leading-[140%] text-[1.25rem] lg:text-[1.5rem]">
                 {stat.title}
               </h4>
               <p className="text-m-regular text-[0.75rem] md:text-[0.875rem] text-grayscale-600 text-center">
