@@ -4,7 +4,7 @@ import testimonials from "../data/testimonials";
 
 export default function Testimonial() {
     return (
-        <div className="testimonial-section py-20 px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center">
+        <div className="testimonial-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center">
             <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
                 <Header
                     title="Real Stories from Real Users"
@@ -15,7 +15,7 @@ export default function Testimonial() {
                         {testimonials.map((item, index) => (
                         <div
                             key={index}
-                            className="flex flex-row gap-4 flex-shrink-0 w-[52rem] snap-start"
+                            className="flex flex-col md:flex-row gap-4 flex-shrink-0 w-full md:w-[52rem] snap-start"
                         >
                             <Image
                             src={item.image}
@@ -23,21 +23,21 @@ export default function Testimonial() {
                             width={294}
                             height={305}
                             />
-                            <div className="flex flex-col gap-8 p-8 max-w-[36.25rem] rounded-[20px] border border-grayscale-200 shadow">
+                            <div className="flex flex-col gap-8 p-6 md:p-8 max-w-[36.25rem] rounded-[20px] border border-grayscale-200 shadow">
                             <Image
                                 src={item.stars}
                                 alt="stars"
                                 width={116}
                                 height={20}
                             />
-                            <p className="text-large text-grayscale-600">
+                            <p className="text-medium md:text-large text-grayscale-600">
                                 “{item.quote}”
                             </p>
                             <div className="flex flex-col gap-0.5">
-                                <p className="text-xlarge text-grayscale-950 font-medium">
+                                <p className="text-large md:text-xlarge text-grayscale-950 font-medium">
                                 {item.name}
                                 </p>
-                                <p className="text-medium text-grayscale-600">
+                                <p className="text-small md:text-medium text-grayscale-600">
                                 {item.role}
                                 </p>
                             </div>
