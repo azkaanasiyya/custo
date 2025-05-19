@@ -8,8 +8,8 @@ import Header from "@/components/common/header";
 
 export default function FAQs() {
   return (
-    <div className="faqs-section py-[6.5rem] px-16 flex flex-col justify-center items-center">
-      <div className="container max-w-[67rem] gap-16 flex flex-col justify-center items-center">
+    <div className="faqs-section py-12 md:py-20 lg:py-[6.5rem] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
+      <div className="container max-w-[67rem] gap-10 md:gap-16 flex flex-col justify-center items-center">
         <Header
           title="Frequently Asked Questions"
           description="Find quick answers to common questions about Custo."
@@ -19,16 +19,14 @@ export default function FAQs() {
             <Accordion
               type="single"
               collapsible
-              className="w-full grid grid-cols-2 gap-[1.2rem]"
+              className="w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-10"
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger>
-                  How often is Custo updated with new features?
+                  How do I get started with Custo?
                 </AccordionTrigger>
                 <AccordionContent>
-                  Custo receives regular updates with new features, performance
-                  improvements, and security patches to ensure your CRM stays
-                  fast, secure, and reliable.
+                  Simply sign up, choose a plan, and start organizing your CRM in minutes, no setup required.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
