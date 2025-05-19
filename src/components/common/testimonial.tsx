@@ -22,6 +22,7 @@ export default function Testimonial() {
                             alt={item.name}
                             width={294}
                             height={305}
+                            className="w-full h-auto"
                             />
                             <div className="flex flex-col gap-8 p-6 md:p-8 max-w-[36.25rem] rounded-[20px] border border-grayscale-200 shadow">
                             <Image
