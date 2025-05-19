@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Footer() {
     return (
-        <div className="footer bg-[url('/background/bg-footer.svg')] bg-cover md:bg-no-repeat bg-center px-12 lg:px-16 flex flex-col justify-center items-center">
+        <div className="footer bg-[url('/background/bg-footer.svg')] bg-cover md:bg-no-repeat bg-center px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
             <div className="container max-w-[67rem] flex flex-col">
                 <div className="top py-10 lg:py-16 flex flex-col gap-10 md:gap-0 md:flex-row justify-between">
                     <div className="top-left flex flex-col gap-6">
