@@ -189,7 +189,6 @@
   --color-danger-500: #df1c41;
   --color-danger-600: #841127;
 
-  --text-h1: 3.5rem;
 
   --text-small: 12px;
   --text-small--line-height: 150%;
@@ -202,6 +201,19 @@
 
   --text-xlarge: 18px;
   --text-xlarge--line-height: 150%;
+
+  /* Container */
+  --container-decktop:  67rem;
+  --container-tablet: 42rem;
+  --container-mobile: 20.4375rem;
+
+  /* Heading */
+  --text-h1: 3rem;
+  --text-h1--line-height: 120%;
+  --text-h1--font-weight: 600;
+  --text-h1--font-sans: var(--font-sans);
+
+  /* Text */
 
   /* Container */
 
