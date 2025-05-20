@@ -3,11 +3,77 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
+import gsap from "gsap";
+import useIsMobile from "@/lib/hooks/useIsMobile";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile= useIsMobile();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const menuItemsRef = useRef<HTMLUListElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<gsap.core.Timeline | null>(null);
+
+  // Fungsi animasi saat hamburger diklik
+  const animateMobileMenu = () => {
+    if (!containerRef.current || !menuItemsRef.current || !buttonsRef.current)
+      return;
+
+    const tl = gsap.timeline({ paused: true });
+
+    // Tampilkan container
+    tl.set(containerRef.current, { display: "block" });
+
+    // Animasi container fade-in & slide dari atas
+    tl.fromTo(
+      containerRef.current,
+      { y: -30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }
+    );
+
+    // Animasi setiap item menu
+    tl.from(
+      menuItemsRef.current.children,
+      {
+        y: 20,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.3,
+        ease: "power2.out",
+      },
+      "-=0.2"
+    );
+
+    // Animasi tombol Contact & Start
+    tl.from(
+      buttonsRef.current!.children,
+      {
+        y: 20,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.3,
+        ease: "power2.out",
+      },
+      "-=0.3"
+    );
+
+    timelineRef.current = tl;
+    tl.play();
+  };
+
+  const reverseAnimation = () => {
+    timelineRef.current?.reverse();
+  };
+
+  useEffect(() => {
+    if (isOpen && isMobile) {
+      animateMobileMenu();
+    } else {
+      reverseAnimation();
+    }
+  }, [isOpen , isMobile]);
 
   return (
     <nav
@@ -66,14 +132,21 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className={`border max-w-mobile mx-auto block md:hidden ${
-          isOpen ? "block" : "hidden"
+        className={`border max-w-mobile mx-auto ${
+          isOpen && isMobile ? "block" : "hidden"
         }`}
       ></div>
       {isOpen && (
-        <div className="bg-white lg:hidden w-full py-[1.25rem]">
+        <div
+          className="bg-white md:hidden w-full py-[1.25rem]"
+          ref={containerRef}
+          style={{ display: "none" }}
+        >
           <div className="flex flex-col gap-5 justify-center items-center max-w-mobile mx-auto">
-            <ul className="flex flex-col gap-[1rem] text-center">
+            <ul
+              className="flex flex-col gap-[1rem] text-center"
+              ref={menuItemsRef}
+            >
               <li>
                 <Link href="/about" onClick={() => setIsOpen(false)}>
                   <p className="text-grayscale-950 py-[0.5]">About</p>
@@ -90,15 +163,17 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-            <div className="flex flex-col gap-3 w-full">
+            <div className="flex flex-col gap-3 w-full" ref={buttonsRef}>
               <Link href="/contact">
                 <Button variant="Secondary" size="small" className="w-full">
                   Contact Sales
                 </Button>
               </Link>
-              <Button variant="primary" size="small" className="w-full">
-                Start for Free
-              </Button>
+              <Link href={"/start"}>
+                <Button variant="primary" size="small" className="w-full">
+                  Start for Free
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
