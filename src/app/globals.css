@@ -227,6 +227,11 @@
   --text-h1--font-weight: 600;
   --text-h1--font-sans: var(--font-sans);
 
+  --text-h1-mobile: 2rem;
+  --text-h1-mobile--line-height: 120%;
+  --text-h1-mobile--font-weight: 600;
+  --text-h1-mobile--font-sans: var(--font-sans);
+
   /* Text */
   --text-xl-regular: 1.125rem;
   --text-xl-regular--line-height: 160%;
