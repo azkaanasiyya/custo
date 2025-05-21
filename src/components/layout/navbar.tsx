@@ -5,63 +5,17 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
-import gsap from "gsap";
 import useIsMobile from "@/lib/hooks/useIsMobile";
+import { animateMobileMenu } from "@/lib/animation/animateMobileMenu";
+import gsap from "gsap";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const isMobile= useIsMobile();
+  const isMobile = useIsMobile();
   const containerRef = useRef<HTMLDivElement>(null);
   const menuItemsRef = useRef<HTMLUListElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
-
-  // Fungsi animasi saat hamburger diklik
-  const animateMobileMenu = () => {
-    if (!containerRef.current || !menuItemsRef.current || !buttonsRef.current)
-      return;
-
-    const tl = gsap.timeline({ paused: true });
-
-    // Tampilkan container
-    tl.set(containerRef.current, { display: "block" });
-
-    // Animasi container fade-in & slide dari atas
-    tl.fromTo(
-      containerRef.current,
-      { y: -30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }
-    );
-
-    // Animasi setiap item menu
-    tl.from(
-      menuItemsRef.current.children,
-      {
-        y: 20,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.3,
-        ease: "power2.out",
-      },
-      "-=0.2"
-    );
-
-    // Animasi tombol Contact & Start
-    tl.from(
-      buttonsRef.current!.children,
-      {
-        y: 20,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.3,
-        ease: "power2.out",
-      },
-      "-=0.3"
-    );
-
-    timelineRef.current = tl;
-    tl.play();
-  };
 
   const reverseAnimation = () => {
     timelineRef.current?.reverse();
@@ -69,11 +23,12 @@ export default function Navbar() {
 
   useEffect(() => {
     if (isOpen && isMobile) {
-      animateMobileMenu();
+      const tl = animateMobileMenu(containerRef, menuItemsRef, buttonsRef);
+      timelineRef.current = tl;
     } else {
       reverseAnimation();
     }
-  }, [isOpen , isMobile]);
+  }, [isOpen, isMobile]);
 
   return (
     <nav
