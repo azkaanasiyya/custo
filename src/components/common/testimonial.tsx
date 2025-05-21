@@ -76,12 +76,14 @@ export default function Testimonial() {
             ))}
           </Swiper>
           <button
+              aria-label="Next slide"
               ref={prevRef}
               className="absolute top-1/2 left-0 z-10 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition"
             >
               <Image src="/icon/arrow-left.png" alt="Previous" width={20} height={20} />
           </button>
           <button
+              aria-label="Next slide"
               ref={nextRef}
               className="absolute top-1/2 right-0 z-10 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition"
             >
