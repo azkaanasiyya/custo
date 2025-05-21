@@ -35,7 +35,7 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "text-large font-medium md:text-xl-medium text-gray-950 text-left",
+          "text-[1rem] md:text-[1.125rem] font-medium md:text-xl-medium text-gray-950 text-left",
           "cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start gap-[0.75rem] py-[1.25rem] transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 ",
           "[&[data-state=open]>svg]:rotate-45",
           className

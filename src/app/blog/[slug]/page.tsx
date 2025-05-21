@@ -13,7 +13,7 @@ export default function Blogs() {
 
   return (
     <div className="flex w-full justify-center">
-      <div className="flex flex-col w-full max-w-[67rem]">
+      <div className="flex flex-col w-full">
         <HeaderBlogDetail slug={slug} />
         <ImageBlogDetail slug={slug}/>
         <ContentBlogDetail />

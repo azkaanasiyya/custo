@@ -7,14 +7,14 @@ interface ImageBlogDetailProps {
 
 export default function ImageBlogDetail({ slug }: ImageBlogDetailProps) {
   const blog = blogPosts.find((post) => post.slug === slug);
-  
-    if (!blog) {
-      return <p>Blog not found.</p>;
-    }
+
+  if (!blog) {
+    return <p>Blog not found.</p>;
+  }
   return (
     <div className="flex w-full justify-center">
-      <div className="flex w-full max-w-[67rem]">
-        <div className="relative w-full h-[30.125rem]">
+      <div className="flex w-full max-w-mobile md:max-w-tablet lg:max-w-desktop">
+        <div className="relative w-full h-[240px] md:h-[360px] lg:h-[30.125rem]">
           <Image
             src={blog.image}
             alt="image"
