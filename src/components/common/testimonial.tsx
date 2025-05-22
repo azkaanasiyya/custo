@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import Header from "@/components/common/header";
 import Image from "next/image";
 import testimonials from "../data/testimonials";
@@ -11,6 +12,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function Testimonial() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0); // untuk deteksi slide aktif
+
   return (
     <div className="testimonial-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center overflow-x-hidden">
       <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
@@ -20,39 +25,68 @@ export default function Testimonial() {
         />
 
         <div className="relative w-full">
+          <button
+            ref={prevRef}
+            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 bg-white border border-grayscale-200 text-white rounded-full w-8 h-8 hover:bg-grayscale-200 transition"
+          >
+            <i className="ri-arrow-left-line text-black text-l-regular"></i>
+          </button>
+          <button
+            ref={nextRef}
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 bg-white border border-grayscale-200 text-white rounded-full w-8 h-8 hover:bg-grayscale-200 transition"
+          >
+            <i className="ri-arrow-right-line text-black text-l-regular"></i>
+          </button>
+
           <Swiper
             modules={[Navigation, Pagination, A11y]}
-            slidesPerView={1}
-            navigation={true}  
+            slidesPerView={1.2}
+            centeredSlides={true} 
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }}
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSwiper={(swiper) => setActiveIndex(swiper.activeIndex)}
             className="!overflow-visible"
           >
             {testimonials.map((item, index) => (
-              <SwiperSlide key={index} className="px-4">
-                <div className="flex flex-col md:flex-row gap-4 w-full items-center justify-center mx-auto">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={294}
-                    height={305}
-                    className="w-full md:h-[305px] md:w-[294px] h-auto object-cover rounded-xl"
-                  />
-                  <div className="flex flex-col gap-8 p-6 md:p-8 max-w-[36.25rem] rounded-[20px] border border-grayscale-200 shadow">
+              <SwiperSlide key={index}>
+                <div
+                  className={`transition-transform duration-500 ease-in-out p-4 ${
+                    index === activeIndex ? "scale-110 z-10" : "scale-90 opacity-70"
+                  }`}
+                >
+                  <div className="flex flex-col md:flex-row gap-4 w-full items-center justify-center">
                     <Image
-                      src={item.stars}
-                      alt="stars"
-                      width={116}
-                      height={20}
+                      src={item.image}
+                      alt={item.name}
+                      width={294}
+                      height={305}
+                      className="w-full md:h-[305px] md:w-[294px] h-auto object-cover rounded-xl"
                     />
-                    <p className="text-medium md:text-large text-grayscale-600">
-                      “{item.quote}”
-                    </p>
-                    <div className="flex flex-col gap-0.5">
-                      <p className="text-large md:text-xlarge text-grayscale-950 font-medium">
-                        {item.name}
+                    <div className="flex flex-col gap-8 p-6 md:p-8 max-w-[36.25rem] rounded-[20px] border border-grayscale-200 shadow bg-white">
+                      <Image
+                        src={item.stars}
+                        alt="stars"
+                        width={116}
+                        height={20}
+                      />
+                      <p className="text-medium md:text-large text-grayscale-600">
+                        “{item.quote}”
                       </p>
-                      <p className="text-small md:text-medium text-grayscale-600">
-                        {item.role}
-                      </p>
+                      <div className="flex flex-col gap-0.5">
+                        <p className="text-large md:text-xlarge text-grayscale-950 font-medium">
+                          {item.name}
+                        </p>
+                        <p className="text-small md:text-medium text-grayscale-600">
+                          {item.role}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
