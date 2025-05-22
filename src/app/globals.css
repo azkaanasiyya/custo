@@ -138,41 +138,6 @@
   }
 }
 
-@layer utilities {
-  .swiper-button {
-    @apply absolute top-1/2 -translate-y-1/2 z-10;
-  }
-
-  .swiper-button-prev {
-    @apply left-2 rounded-full border hover:bg-grayscale-200 border-grayscale-200;
-    background-image: url('/icon/arrow-left.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .swiper-button-next {
-    @apply right-2 rounded-full border hover:bg-grayscale-200 border-grayscale-200;
-    background-image: url('/icon/arrow-right.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .swiper-button::after {
-    display: none !important;
-  }
-
-  .swiper-button:hover {
-    @apply scale-110 transition-transform duration-200 ease-in-out;
-  }
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  display: none !important;
-}
-
 @theme {
   --font-sans: "Inter", sans-serif;
 
