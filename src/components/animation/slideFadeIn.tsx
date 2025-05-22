@@ -53,7 +53,7 @@ export default function SlideFadeIn({
         {
           [direction]: 0,
           opacity: 1,
-          duration : itemDuration,
+          duration: itemDuration,
           delay: delay + index * itemStaggerDelay,
           ease: "power2.out",
         }
@@ -62,7 +62,7 @@ export default function SlideFadeIn({
   }, [items, delay, duration, staggerDelay]);
 
   return (
-    <div ref={containerRef} className={className}>
+    <div ref={containerRef} className={className} style={{ display: "none" }}>
       {children}
     </div>
   );
