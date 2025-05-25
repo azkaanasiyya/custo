@@ -3,7 +3,7 @@
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import SlideFadeIn from "../animation/slideFadeIn";
+import SlideFadeIn from "../animation/on-scroll/SlideFadeIn";
 
 export default function HomeHero() {
   return (
