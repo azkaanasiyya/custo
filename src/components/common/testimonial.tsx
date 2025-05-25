@@ -12,9 +12,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function Testimonial() {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0); // untuk deteksi slide aktif
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="testimonial-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center overflow-x-hidden">
@@ -41,14 +41,19 @@ export default function Testimonial() {
           <Swiper
             modules={[Navigation, Pagination, A11y]}
             slidesPerView={1.2}
-            centeredSlides={true} 
+            centeredSlides={true}
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
             }}
             onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
+              if (
+                  typeof swiper.params.navigation === "object" &&
+                  swiper.params.navigation !== null
+                ) {
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  swiper.params.navigation.nextEl = nextRef.current;
+                }
             }}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             onSwiper={(swiper) => setActiveIndex(swiper.activeIndex)}
