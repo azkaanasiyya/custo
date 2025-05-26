@@ -6,6 +6,7 @@ import useBlog from "@/lib/hooks/useBlog";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MoreBlogDetail() {
   const { slug } = useParams() as { slug: string };
@@ -41,10 +42,13 @@ export default function MoreBlogDetail() {
   return (
     <div className="flex w-full justify-center">
       <div className="flex flex-col gap-[2.5rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop py-[6.5rem]">
+      <div className="flex flex-col gap-[2.5rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop py-[6.5rem]">
         <div className="flex flex-row justify-between items-center">
+          <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
           <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
             More Insights & Tips
           </h2>
+          <Link href={"/blog"} className="hidden md:block">
           <Link href={"/blog"} className="hidden md:block">
             <Button variant={"Secondary"} size={"small"}>
               Explore More
@@ -52,6 +56,11 @@ export default function MoreBlogDetail() {
           </Link>
         </div>
         <BlogList data={nextPosts} />
+        <Link href={"/blog"} className="block md:hidden">
+          <Button variant={"Secondary"} size={"small"} className="w-full">
+            Explore More
+          </Button>
+        </Link>
         <Link href={"/blog"} className="block md:hidden">
           <Button variant={"Secondary"} size={"small"} className="w-full">
             Explore More

@@ -16,6 +16,8 @@ export default function ImageBlogDetail({ slug }: ImageBlogDetailProps) {
     <div className="flex w-full justify-center">
       <div className="flex w-full max-w-mobile md:max-w-tablet lg:max-w-desktop">
         <div className="relative w-full h-[240px] md:h-[360px] lg:h-[30.125rem]">
+      <div className="flex w-full max-w-mobile md:max-w-tablet lg:max-w-desktop">
+        <div className="relative w-full h-[240px] md:h-[360px] lg:h-[30.125rem]">
           <Image
             src={blogPosts?.mainImage?.asset?.url || "/placeholder-image.jpg"}
             alt={blogPosts?.mainImage?.alt || "Blog Image"}

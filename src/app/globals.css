@@ -189,7 +189,6 @@
   --color-danger-500: #df1c41;
   --color-danger-600: #841127;
 
-  --text-h1: 3.5rem;
 
   --text-small: 12px;
   --text-small--line-height: 150%;
@@ -202,8 +201,38 @@
 
   --text-xlarge: 18px;
   --text-xlarge--line-height: 150%;
-  
-/* .. */
+
+  /* Container */
+  --container-decktop:  67rem;
+  --container-tablet: 42rem;
+  --container-mobile: 20.4375rem;
+
+  /* Heading */
+  --text-h1: 3rem;
+  --text-h1--line-height: 120%;
+  --text-h1--font-weight: 600;
+  --text-h1--font-sans: var(--font-sans);
+
+  /* Text */
+
+  /* Container */
+
+  --container-desktop:  67rem;
+  --container-tablet: 42rem;
+  --container-mobile: 20.4375rem;
+
+  /* Heading */
+  --text-h1: 3rem;
+  --text-h1--line-height: 120%;
+  --text-h1--font-weight: 600;
+  --text-h1--font-sans: var(--font-sans);
+
+  --text-h1-mobile: 2rem;
+  --text-h1-mobile--line-height: 120%;
+  --text-h1-mobile--font-weight: 600;
+  --text-h1-mobile--font-sans: var(--font-sans);
+
+  /* Text */
   --text-xl-regular: 1.125rem;
   --text-xl-regular--line-height: 160%;
   --text-xl-regular--font-weight: 400;
@@ -219,8 +248,13 @@
   --text-l-regular--font-weight: 400;
   --text-l-regular--font-sans: var(--font-sans);
 
-  --text-m: 0.875rem;
-  --text-m--line-height: 160%;
-  --text-m--font-weight: 400;
-  --text-m--font-sans: var(--font-sans);
+  --text-m-regular: 0.875rem;
+  --text-m-regular--line-height: 160%;
+  --text-m-regular--font-weight: 400;
+  --text-m-regular--font-sans: var(--font-sans);
+
+  --text-s-medium: 0.75rem;
+  --text-s-medium--line-height: 160%;
+  --text-s-medium--font-weight: 500;
+  --text-s-medium--font-sans: var(--font-sans);
 }
