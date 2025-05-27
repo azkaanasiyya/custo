@@ -7,12 +7,7 @@ export default function Features2() {
     <SlideFadeIn
       items={[
         {
-          selector: "[data-animate='ft-2']",
-          direction: "x",
-          from: -100,
-        },
-        {
-          selector: "[data-animate='ft-3']",
+          selector: "[data-animate='ft-1']",
           direction: "x",
           from: -100,
         },
@@ -34,18 +29,21 @@ export default function Features2() {
               />
               <div className="flex flex-col gap-[1rem]">
                 <p
+                  data-animate="ft-1"
                   className="text-xl-medium text-[1rem] md:text-[1.125rem] text-primary-500"
-                  data-animate="ft-2"
                 >
                   {item.subTitle}
                 </p>
                 <h2
+                  data-animate="ft-1"
                   className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950"
-                  data-animate="ft-3"
                 >
                   {item.title}
                 </h2>
-                <p className="text-xl-regular text-grayscale-600">
+                <p
+                  data-animate="ft-1"
+                  className="text-xl-regular text-grayscale-600"
+                >
                   {item.description}
                 </p>
               </div>
