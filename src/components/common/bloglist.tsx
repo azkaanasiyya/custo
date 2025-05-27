@@ -20,13 +20,16 @@ export default function BlogList({ limit, data }: BlogListProps) {
         .map((blog, index) => (
           <Link key={index} href={`/blog/${blog.slug}`} passHref>
             <div className="flex flex-col gap-[1.5rem] cursor-pointer hover:opacity-90">
-              <Image
-                src={blog.mainImage?.asset?.url || "/placeholder-image.jpg"}
-                alt={blog.title}
-                width={344}
-                height={280}
-                style={{ height: "auto" }}
-              />
+              <div className="relative w-[344px] h-[280px]">
+                <Image
+                  src={blog.mainImage?.asset?.url || "/placeholder-image.jpg"}
+                  alt={blog.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 344px"
+                />
+              </div>
+
               <div className="flex flex-col gap-[1rem]">
                 <p className="text-large md:text-xlarge text-grayscale-950 font-medium">
                   {blog.title}
