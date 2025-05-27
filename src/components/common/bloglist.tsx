@@ -45,7 +45,7 @@ export default function BlogList({ limit, data }: BlogListProps) {
                     height={1}
                   />
                   <p className="text-medium md:text-large text-grayscale-600">
-                    {blog.type}
+                    {blog.category.title}
                   </p>
                 </div>
               </div>

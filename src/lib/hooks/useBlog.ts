@@ -6,7 +6,9 @@ import { generateSlugBlog } from "../utils/generateSlugBlog";
 export interface blogProps {
   _id: string;
   title: string;
-  type: string;
+  category:{
+    title: string;
+  };
   slug: string;
   author: {
     name: string;
@@ -41,7 +43,9 @@ export default function useBlog() {
           _id,
           title,
           date,
-          type,
+          category -> {
+            title
+          },
           author -> {
             name,
             image {

@@ -17,7 +17,7 @@ export default function HeaderBlogDetail({ slug }: HeaderBlogDetailProps) {
 
   return (
     <div className="flex w-full justify-center">
-      <div className="flex flex-col gap-[2rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop pt-[9rem] pb-[3rem]">
+      <div className="flex flex-col gap-[2rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop pt-[9rem]">
         <Link href="/blog">
           <div className="flex flex-row gap-[0.5rem] items-center cursor-pointer">
             <ArrowLeft height={20} width={20} />
