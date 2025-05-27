@@ -14,11 +14,13 @@ export default function Blogs() {
   return (
     <div className="flex w-full justify-center">
       <div className="flex flex-col w-full">
-        <HeaderBlogDetail slug={slug} />
-        <ImageBlogDetail slug={slug}/>
-        <ContentBlogDetail />
+        <div className="flex flex-col gap-[3rem]">
+          <HeaderBlogDetail slug={slug} />
+          <ImageBlogDetail slug={slug} />
+          <ContentBlogDetail />
+        </div>
         <MoreBlogDetail />
-        <CTA/>
+        <CTA />
       </div>
     </div>
   );
