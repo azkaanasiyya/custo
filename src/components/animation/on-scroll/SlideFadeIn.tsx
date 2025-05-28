@@ -12,6 +12,7 @@ interface SelectorSlideFadeIn {
   from?: number;
   toOpacity?: number;
   staggerDelay?: number;
+  delay?: number;
 }
 
 interface SlideFadeInProps {
@@ -111,7 +112,7 @@ export default function SlideFadeIn({
           {
             ...toVars,
             duration,
-            delay: delay + index * (item.staggerDelay ?? staggerDelay),
+            delay: (item.delay ?? delay) + index * (item.staggerDelay ?? staggerDelay),
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
