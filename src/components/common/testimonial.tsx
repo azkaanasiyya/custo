@@ -64,6 +64,7 @@ export default function Testimonial() {
             modules={[Navigation, Pagination, A11y]}
             slidesPerView={1}
             spaceBetween={0}
+            initialSlide={1}
             breakpoints={{
               768: { slidesPerView: 1 },
               1024: { slidesPerView: 1.2 }
