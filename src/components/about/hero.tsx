@@ -46,6 +46,7 @@ export default function AboutHero() {
                   alt="content"
                   width={344}
                   height={198}
+                  priority
                 />
                 <Image
                   data-animate="img2"
@@ -53,6 +54,7 @@ export default function AboutHero() {
                   alt="content"
                   width={344}
                   height={198}
+                  priority
                 />
               </div>
               <div>
@@ -62,6 +64,7 @@ export default function AboutHero() {
                   alt="content"
                   width={344}
                   height={416}
+                  priority
                 />
               </div>
               <div className="flex flex-col gap-[1.25rem] hidden lg:flex">
@@ -71,6 +74,7 @@ export default function AboutHero() {
                   alt="content"
                   width={344}
                   height={198}
+                  priority
                 />
                 <Image
                   data-animate="img5"
@@ -78,6 +82,7 @@ export default function AboutHero() {
                   alt="content"
                   width={344}
                   height={198}
+                  priority
                 />
               </div>
             </div>
@@ -98,36 +103,42 @@ export default function AboutHero() {
                   alt="client"
                   width={154}
                   height={28}
+                  priority
                 />
                 <Image
                   src="client/client2.svg"
                   alt="client"
                   width={154}
                   height={28}
+                  priority
                 />
                 <Image
                   src="client/client3.svg"
                   alt="client"
                   width={154}
                   height={28}
+                  priority
                 />
                 <Image
                   src="client/client4.svg"
                   alt="client"
                   width={154}
                   height={28}
+                  priority
                 />
                 <Image
                   src="client/client5.svg"
                   alt="client"
                   width={154}
                   height={28}
+                  priority
                 />
                 <Image
                   src="client/client6.svg"
                   alt="client"
                   width={154}
                   height={28}
+                  priority
                 />
               </div>
             </div>
