@@ -11,26 +11,14 @@ export default function HomeHero() {
       <div className="relative bg-[url(/bg-gradients/Background.png)] bg-cover  bg-top flex justify-center rounded-[0.75rem]">
         <SlideFadeIn
           items={[
-            { selector: "[data-animate='header']", direction: "x", from: -100 },
-            { selector: "[data-animate='title']", direction: "y", from: 70 },
-            {
-              selector: "[data-animate='description']",
-              direction: "y",
-              from: 70,
-            },
-            { selector: "[data-animate='button']", direction: "y", from: 100 },
-            {
-              selector: "[data-animate='companies']",
-              direction: "y",
-              from: 70,
-            },
-            { selector: "[data-animate='rating']", direction: "y", from: 70 },
+            { selector: "[data-animate='hero-1']", direction: "y", from: 100 },
           ]}
+          staggerDelay={0.15}
         >
           <div className="flex flex-col gap-[3rem] w-full pt-[9.5rem] overflow-hidden">
             <div className="flex flex-col gap-[3rem] mx-auto max-w-mobile md:max-w-tablet lg:max-w-desktop">
               <div className="flex flex-col gap-[2rem] items-center">
-                <div data-animate="header">
+                <div data-animate="hero-1">
                   <button className="inline-flex items-center gap-[0.5rem] rounded-[5rem] bg-radial-[at_0%_0%] from-success-700 to-success-700/50 to-99% px-[1rem] border-[0.5px] border-white/40">
                     <span className="text-s-medium text-gray-950">
                       Introducing Custo
@@ -39,12 +27,12 @@ export default function HomeHero() {
                   </button>
                 </div>
                 <div className="flex flex-col gap-[1rem] text-center max-w-[55.75rem] mx-auto">
-                  <div data-animate="title">
+                  <div data-animate="hero-1">
                     <h1 className="text-h1 text-[2rem] md:text-[3rem]">
                       Powerful CRM Solutions for Growing Businesses
                     </h1>
                   </div>
-                  <div data-animate="description">
+                  <div data-animate="hero-1">
                     <p className="text-xl-regular text-[1rem] md:text-[1.125rem] max-w-[41rem] mx-auto text-grayscale-600">
                       Streamline your customer relationships with an intuitive
                       CRM platform. Optimize workflows, and drive business
@@ -52,7 +40,7 @@ export default function HomeHero() {
                     </p>
                   </div>
                 </div>
-                <div data-animate="button">
+                <div data-animate="hero-1">
                   <Button
                     variant="primary"
                     size="base"
@@ -63,10 +51,7 @@ export default function HomeHero() {
                 </div>
               </div>
               <div className="flex flex-col gap-[1.5rem] md:flex-row items-center justify-between">
-                <div
-                  data-animate="companies"
-                  className="flex flex-row gap-[1rem]"
-                >
+                <div data-animate="hero-1" className="flex flex-row gap-[1rem]">
                   <Image
                     src="/icon/List.svg"
                     alt="list"
@@ -80,7 +65,7 @@ export default function HomeHero() {
                   </div>
                 </div>
                 <div
-                  data-animate="rating"
+                  data-animate="hero-1"
                   className="flex flex-row gap-[1.5rem] items-center"
                 >
                   <div className="typography">
@@ -100,7 +85,7 @@ export default function HomeHero() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] w-full md:min-w-[1072px] max-w-[1072px] ml-[1rem] md:ml-[40px] lg:mx-auto">
+            <div data-animate="hero-1" className="relative h-[400px] w-full md:min-w-[1072px] max-w-[1072px] ml-[1rem] md:ml-[40px] lg:mx-auto">
               <Image
                 src="/image/Dashboard.svg"
                 alt="hero"
