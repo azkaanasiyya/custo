@@ -7,7 +7,6 @@ import testimonials from "../data/testimonials";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import SlideFadeIn from "../animation/on-scroll/SlideFadeIn"; 
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -41,30 +40,22 @@ export default function Testimonial() {
 
   return (
     <div className="testimonial-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center overflow-x-hidden">
-      <SlideFadeIn
-        items={[
-          { selector: "[data-animate='header']", direction: "y", from: 50 },
-          { selector: "[data-animate='slide']", direction: "y", from: 70, staggerDelay: 0.15 },
-        ]}
-      >
         <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
-          <div data-animate="header">
-            <Header
+           <Header
               title="Real Stories from Real Users"
               description="Hear how Custo has helped businesses close more deals, collaborate better, and stay organized."
             />
-          </div>
 
           <div className="relative w-full">
             <button
-              ref={prevRefDesktop}
-              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition items-center justify-center"
+            ref={prevRefDesktop}
+            className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition items-center justify-center"
             >
               <i className="ri-arrow-left-line text-black text-l-regular"></i>
             </button>
             <button
-              ref={nextRefDesktop}
-              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition items-center justify-center"
+            ref={nextRefDesktop}
+            className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition items-center justify-center"
             >
               <i className="ri-arrow-right-line text-black text-l-regular"></i>
             </button>
@@ -80,14 +71,14 @@ export default function Testimonial() {
               }}
               centeredSlides={true}
               navigation={{
-                prevEl: isDesktop ? prevRefDesktop.current : prevRefMobile.current,
-                nextEl: isDesktop ? nextRefDesktop.current : nextRefMobile.current,
+              prevEl: isDesktop ? prevRefDesktop.current : prevRefMobile.current,
+              nextEl: isDesktop ? nextRefDesktop.current : nextRefMobile.current,
               }}
               onBeforeInit={(swiper) => {
-                if (typeof swiper.params.navigation === "object" && swiper.params.navigation !== null) {
-                  swiper.params.navigation.prevEl = isDesktop ? prevRefDesktop.current : prevRefMobile.current;
-                  swiper.params.navigation.nextEl = isDesktop ? nextRefDesktop.current : nextRefMobile.current;
-                }
+              if (typeof swiper.params.navigation === "object" && swiper.params.navigation !== null) {
+                swiper.params.navigation.prevEl = isDesktop ? prevRefDesktop.current : prevRefMobile.current;
+                swiper.params.navigation.nextEl = isDesktop ? nextRefDesktop.current : nextRefMobile.current;
+              }
               }}
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
               onSwiper={(swiper) => {
@@ -95,9 +86,9 @@ export default function Testimonial() {
                 setActiveIndex(swiper.activeIndex);
               }}
               className="!overflow-visible"
-            >
+              >
               {testimonials.map((item, index) => (
-                <SwiperSlide key={index} data-animate="slide">
+                <SwiperSlide key={index}>
                   <div
                     className={`transition-transform duration-500 ease-in-out p-4 ${
                       index === activeIndex ? "scale-110 z-10" : "scale-90 opacity-70"
@@ -157,7 +148,6 @@ export default function Testimonial() {
             </div>
           </div>
         </div>
-      </SlideFadeIn>
     </div>
   );
 }
