@@ -11,7 +11,14 @@ export default function Features2() {
           direction: "x",
           from: -100,
         },
+        {
+          selector: "[data-animate='ft-2']",
+          direction: "x",
+          from: -100,
+          delay: 0.1,
+        },
       ]}
+      staggerDelay={0.15}
     >
       <div className="flex w-full justify-center py-[6.5rem]">
         <div className="flex flex-col gap-[4rem] md:gap-[5rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop">
@@ -20,16 +27,18 @@ export default function Features2() {
               className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]"
               key={index}
             >
-              <Image
-                src={item.image}
-                alt=""
-                width={454}
-                height={440}
-                className="hidden lg:block"
-              />
+              <div data-animate="ft-1">
+                <Image
+                  src={item.image}
+                  alt=""
+                  width={454}
+                  height={440}
+                  className="hidden lg:block"
+                />
+              </div>
               <div className="flex flex-col gap-[1rem]">
                 <p
-                  data-animate="ft-1"
+                  data-animate="ft-2"
                   className="text-xl-medium text-[1rem] md:text-[1.125rem] text-primary-500"
                 >
                   {item.subTitle}
