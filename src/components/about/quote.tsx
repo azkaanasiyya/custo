@@ -6,7 +6,7 @@ export default function AboutQuote() {
     <div className="p-2">
       <SlideFadeIn
         items={[
-          { selector: "[data-animate='quote-image']", direction: "x", from: -100 },
+          { selector: "[data-animate='quote-image']", direction: "x", from: -70, start: "top bottom" },
           { selector: "[data-animate='header']", direction: "y", from: 70 },
           { selector: "[data-animate='paragraph']", direction: "y", from: 70 },
           { selector: "[data-animate='profile-name']", direction: "y", from: 30 },

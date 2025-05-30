@@ -13,6 +13,7 @@ interface SelectorSlideFadeIn {
   toOpacity?: number;
   staggerDelay?: number;
   delay?: number;
+  start?: string;
 }
 
 interface SlideFadeInProps {
@@ -117,7 +118,7 @@ export default function SlideFadeIn({
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
-              start: "top 85%",
+              start: item.start ?? "top 85%",
               end: "bottom 15%",
               toggleActions: "play reverse play reverse",
             },
