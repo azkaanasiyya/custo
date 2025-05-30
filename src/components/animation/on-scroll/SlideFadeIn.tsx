@@ -10,6 +10,9 @@ interface SelectorSlideFadeIn {
   selector: string;
   direction?: "x" | "y";
   from?: number;
+  toOpacity?: number;
+  staggerDelay?: number;
+  delay?: number;
 }
 
 interface SlideFadeInProps {
@@ -99,17 +102,18 @@ export default function SlideFadeIn({
 
       const toVars =
         direction === "x"
-          ? { opacity: 1, x: 0 }
-          : { opacity: 1, y: 0 };
+          ? { opacity: item.toOpacity ?? 1, x: 0 }
+          : { opacity: item.toOpacity ?? 1, y: 0 };
 
       elements.forEach((el, index) => {
+        el.setAttribute("style", "will-change: transform, opacity");
         gsap.fromTo(
           el,
           fromVars,
           {
             ...toVars,
             duration,
-            delay: delay + index * staggerDelay,
+            delay: (item.delay ?? delay) + index * (item.staggerDelay ?? staggerDelay),
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,

@@ -138,6 +138,10 @@
   }
 }
 
+[data-animate] {
+  opacity: 0;
+}
+
 @theme {
   --font-sans: "Inter", sans-serif;
 
