@@ -9,7 +9,7 @@ export default function AboutHero() {
       <div className="hero-section pt-[7.5rem] pb-20 px-6 rounded-[12px] md:pt-[9.5rem] md:pb-[6rem] md:px-[3.5rem] flex flex-col bg-grayscale-50 items-center">
         <SlideFadeIn
           items={[
-            { selector: "[data-animate='title']", direction: "y", from: 50 },
+            { selector: "[data-animate='title']", direction: "y", from: 50, start: "top bottom" },
             { selector: "[data-animate='desc']", direction: "y", from: 50 },
             { selector: "[data-animate='img1']", direction: "y", from: 70 },
             { selector: "[data-animate='img2']", direction: "y", from: 70 },
