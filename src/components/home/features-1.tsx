@@ -7,18 +7,32 @@ export default function Features1() {
     <div className="flex w-full justify-center">
       <SlideFadeIn
         items={[
-          { selector: "[data-animate='features-1']", direction: "x", from: -70 },
+          {
+            selector: "[data-animate='features-1']",
+            direction: "x",
+            from: -100,
+          },
+          {
+            selector: "[data-animate='features-2-list']",
+            direction: "x",
+            from: -100,
+            delay: 0.1,
+          },
         ]}
+        staggerDelay={0.15}
       >
         <div className="flex flex-col gap-[3rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop py-[3rem] md:py-[5rem] lg:py-[6.5rem]">
-          <div className="mx-auto">
+          <div data-animate="features-1" className="mx-auto">
             <Header
               title="Elevate Business Growth"
               description="Scale your business effortlessly with a powerful and intuitive CRM solutions."
             />
           </div>
           <div className="flex flex-col lg:flex-row justify-between items-center p-[1.25rem] md:p-[2rem] lg:p-[2.5rem] rounded-[1.25rem] border border-gray-200 shadow-[0_0_8px_rgba(0,0,0,0.10)] gap-[2.5rem]">
-            <div className="flex flex-col gap-[2rem]">
+            <div
+              data-animate="features-2-list"
+              className="flex flex-col gap-[2rem]"
+            >
               <Image
                 src="/image/Image.svg"
                 alt="Description of the image"
@@ -34,7 +48,7 @@ export default function Features1() {
                     height={24}
                   />
                 </div>
-                <div data-animate="features-1" className="flex flex-col gap-[0.5rem]">
+                <div className="flex flex-col gap-[0.5rem]">
                   <h4 className="font-sans font-semibold text-[1.25rem] lg:text-[1.5rem] leading-[140%] text-gray-950">
                     Task Automation
                   </h4>
@@ -45,7 +59,10 @@ export default function Features1() {
               </div>
             </div>
             <div className="w-px h-full bg-grayscale-200" />
-            <div className="flex flex-col gap-[2rem]">
+            <div
+              data-animate="features-2-list"
+              className="flex flex-col gap-[2rem]"
+            >
               <Image
                 src="/image/Image (1).svg"
                 alt="Description of the image"
@@ -61,7 +78,7 @@ export default function Features1() {
                     height={24}
                   />
                 </div>
-                <div data-animate="features-1" className="flex flex-col gap-[0.5rem]">
+                <div className="flex flex-col gap-[0.5rem]">
                   <h4 className="font-sans font-semibold  text-[1.25rem] lg:text-[1.5rem] leading-[140%] text-gray-950">
                     Meeting Organizer
                   </h4>
