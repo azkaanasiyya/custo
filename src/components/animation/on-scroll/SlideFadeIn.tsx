@@ -106,6 +106,7 @@ export default function SlideFadeIn({
           : { opacity: item.toOpacity ?? 1, y: 0 };
 
       elements.forEach((el, index) => {
+        el.setAttribute("style", "will-change: transform, opacity");
         gsap.fromTo(
           el,
           fromVars,
