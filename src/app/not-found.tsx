@@ -1,10 +1,10 @@
 import React from 'react'
-import Page404 from './404/page'
+import Hero404 from '@/components/404/hero'
 
 export default function NotFound() {
   return (
     <>
-    <Page404 />
+    <Hero404 />
     </>
   )
 }
