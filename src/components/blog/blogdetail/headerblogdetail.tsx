@@ -2,7 +2,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import useBlog from "@/lib/hooks/useBlog";
-import SlideFadeIn from "@/components/animation/slideFadeIn";
+import SlideFadeIn from "@/components/animation/fadeIn";
 
 interface HeaderBlogDetailProps {
   slug: string | string[] | undefined;

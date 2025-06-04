@@ -3,7 +3,7 @@
 import useBlog, { blogProps } from "@/lib/hooks/useBlog";
 import Image from "next/image";
 import Link from "next/link";
-import FadeInSection from "../animation/slideFadeIn";
+import FadeInSection from "../animation/fadeIn";
 
 interface BlogListProps {
   limit?: number;

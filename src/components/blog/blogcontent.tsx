@@ -1,4 +1,4 @@
-import FadeInSection from "../animation/slideFadeIn";
+import FadeInSection from "../animation/fadeIn";
 import BlogList from "../common/bloglist";
 
 export default function BlogContent() {
