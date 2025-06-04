@@ -3,7 +3,7 @@
 import useBlog, { blogProps } from "@/lib/hooks/useBlog";
 import Image from "next/image";
 import Link from "next/link";
-import SlideFadeIn from "../animation/on-scroll/SlideFadeIn";
+import FadeInSection from "../animation/slideFadeIn";
 
 interface BlogListProps {
   limit?: number;
@@ -15,27 +15,12 @@ export default function BlogList({ limit, data }: BlogListProps) {
   const postToDisplay = data ? data : limit ? blog.slice(0, limit) : blog;
 
   return (
-    <SlideFadeIn
-      items={[
-        {
-          selector: "[data-animate='blog_detail-1']",
-          direction: "y",
-          from: 100,
-          delay: 0.1,
-        },
-      ]}
-      staggerDelay={0.15}
-    >
-      <div className="blog grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
-        {postToDisplay
-          .filter((blog) => blog && blog.slug)
-          .map((blog, index) => (
-            <Link
-              data-animate="blog_detail-1"
-              key={index}
-              href={`/blog/${blog.slug}`}
-              passHref
-            >
+    <div className="blog grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
+      {postToDisplay
+        .filter((blog) => blog && blog.slug)
+        .map((blog, index) => (
+          <FadeInSection key={index} delay={index * 0.1} stagger={0.1}>
+            <Link key={index} href={`/blog/${blog.slug}`} passHref>
               <div className="flex flex-col gap-[1.5rem] cursor-pointer hover:opacity-90">
                 <div className="relative w-[344px] h-[280px]">
                   <Image
@@ -68,8 +53,8 @@ export default function BlogList({ limit, data }: BlogListProps) {
                 </div>
               </div>
             </Link>
-          ))}
-      </div>
-    </SlideFadeIn>
+          </FadeInSection>
+        ))}
+    </div>
   );
 }

@@ -1,68 +1,62 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React, { PropsWithChildren, useEffect, useRef } from "react";
+import gsap from "gsap";
 
-interface SelectorSlideFadeIn {
-  selector: string;
-  direction?: "x" | "y";
-  from?: number;
-  duration?: number;
-  staggerDelay?: number;
-}
-
-interface SlideFadeInProps {
-  children: React.ReactNode;
-  items: SelectorSlideFadeIn[];
+interface FadeInSectionProps extends PropsWithChildren {
   delay?: number;
-  duration?: number;
-  staggerDelay?: number;
+  variant?: "top-to-bottom" | "bottom-to-top";
+  stagger?: number;
   className?: string;
 }
 
-export default function SlideFadeIn({
+export default function FadeInSection({
   children,
-  items,
   delay = 0,
-  duration = 0.7,
-  staggerDelay = 0.1,
+  variant = "bottom-to-top",
+  stagger = 0.2,
   className = "",
-}: SlideFadeInProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+}: FadeInSectionProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!ref.current) return;
 
-    gsap.set(containerRef.current, { display: "block" });
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const elements = ref.current?.children;
+            if (elements) {
+              gsap.fromTo(
+                elements,
+                { opacity: 0, y: variant === "bottom-to-top" ? 25 : -25 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.75,
+                  delay,
+                  stagger: stagger,
+                  ease: "power2.out",
+                }
+              );
+            }
+            observerInstance.unobserve(entry.target); // Stop observing after animation
+          }
+        });
+      },
+      { threshold: 0 }
+    );
 
-    items.forEach((item, index) => {
-      const el = containerRef.current?.querySelector(item.selector);
-      if (!el) return;
+    observer.observe(ref.current);
 
-      const direction = item.direction || "y";
-      const from = item.from ?? (direction === "x" ? 100 : 70);
-      const itemDuration = item.duration ?? duration;
-      const itemStaggerDelay = item.staggerDelay ?? staggerDelay;
-
-      gsap.fromTo(
-        el,
-        {
-          [direction]: from,
-          opacity: 0,
-        },
-        {
-          [direction]: 0,
-          opacity: 1,
-          duration: itemDuration,
-          delay: delay + index * itemStaggerDelay,
-          ease: "power2.out",
-        }
-      );
-    });
-  }, [items, delay, duration, staggerDelay]);
+    return () => {
+      observer.disconnect();
+    };
+  }, [delay, variant,stagger]);
 
   return (
-    <div ref={containerRef} className={className} style={{ display: "none" }}>
+    <div ref={ref} className={className}>
       {children}
     </div>
   );
