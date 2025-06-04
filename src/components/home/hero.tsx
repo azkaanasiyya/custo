@@ -3,7 +3,7 @@
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import FadeInSection from "../animation/slideFadeIn";
+import FadeInSection from "../animation/fadeIn";
 
 export default function HomeHero() {
   return (
@@ -47,7 +47,10 @@ export default function HomeHero() {
                 </Button>
               </div>
             </FadeInSection>
-            <FadeInSection delay={0} className="flex flex-col gap-[1.5rem] md:flex-row items-center justify-between">
+            <FadeInSection
+              delay={0}
+              className="flex flex-col gap-[1.5rem] md:flex-row items-center justify-between"
+            >
               <div className="flex flex-row gap-[1rem]">
                 <Image src="/icon/List.svg" alt="list" width={72} height={32} />
                 <div className="w-full max-w-[12.625rem]">
