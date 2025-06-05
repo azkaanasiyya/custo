@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { pricingPlans as plansData } from "../data/pricing";
-import SlideFadeIn from "../animation/on-scroll/SlideFadeIn";
+import FadeInSection from "../animation/fadeIn";
 
 export default function PricingHero() {
   const [isAnnually, setIsAnnually] = useState(false);
@@ -28,15 +28,9 @@ export default function PricingHero() {
   return (
     <div className="p-2">
       <div className="hero-section bg-[url('/background/bg-pricing.png')] bg-cover bg-center rounded-[0.75rem] pt-[120px] md:pt-40 pb-12 md:pb-[6.5rem] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
-        <SlideFadeIn
-          items={[
-            { selector: "[data-animate='header']", direction: "y", from: 50 },
-            { selector: "[data-animate='toggle']", direction: "y", from: 50, delay: 0.1 },
-            { selector: "[data-animate='cards']", direction: "y", from: 70, staggerDelay: 0.15 },
-          ]}
-        >
-          <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-10">
-            <div data-animate="header" className="header flex flex-col gap-4 justify-center items-center">
+        <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-10">
+          <FadeInSection stagger={0.15} variant="bottom-to-top" className="w-full flex flex-col justify-center items-center">
+            <div className="header flex flex-col gap-4 justify-center items-center">
               <h1 className="text-h1 md:text-[48px] lg:text-[56px] leading-[120%] font-semibold text-grayscale-950 text-center max-w-[550px]">
                 Designed for Sustainable Growth
               </h1>
@@ -44,8 +38,10 @@ export default function PricingHero() {
                 Invest in a solution that scales with precision and purpose.
               </p>
             </div>
+          </FadeInSection>
 
-            <div data-animate="toggle" className="flex justify-center">
+          <FadeInSection delay={0.1} variant="bottom-to-top">
+            <div className="flex justify-center">
               <div className="relative flex items-center bg-[#DDF5E6] rounded-full p-1 w-[280px] h-[48px]">
                 <div
                   className={`absolute top-1 left-1 h-[40px] w-[132px] rounded-full bg-white shadow transition-all duration-300 ${
@@ -72,11 +68,10 @@ export default function PricingHero() {
                 </button>
               </div>
             </div>
+          </FadeInSection>
 
-            <div
-              data-animate="cards"
-              className="content grid grid-cols-1 w-full lg:grid-cols-3 items-center gap-5 md:pt-6"
-            >
+          <FadeInSection stagger={0.15} variant="bottom-to-top" className="w-full">
+            <div className="content grid grid-cols-1 w-full lg:grid-cols-3 items-center gap-5 md:pt-6">
               {pricingPlans.map((plan, idx) => (
                 <div
                   key={idx}
@@ -131,8 +126,8 @@ export default function PricingHero() {
                 </div>
               ))}
             </div>
-          </div>
-        </SlideFadeIn>
+          </FadeInSection>
+        </div>
       </div>
     </div>
   );
