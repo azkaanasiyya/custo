@@ -118,14 +118,16 @@ export default function SlideFadeIn({
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
-              start: item.start ?? "top 85%",
+              start: item.start ?? "top 90%",
               end: "bottom 15%",
               toggleActions: "play reverse play reverse",
+              // markers: true,
             },
           }
         );
       });
     });
+    ScrollTrigger.refresh();
   }, [visibleSelectors, delay, duration, staggerDelay, items]);
 
   return (
