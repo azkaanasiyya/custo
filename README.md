@@ -35,7 +35,7 @@ custo/
 └── README.md
 
 
-# 1. Clone repositori
+# 1. Clone repository
 git clone https://github.com/username/custo.git
 cd custo
 
