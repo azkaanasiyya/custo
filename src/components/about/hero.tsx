@@ -24,15 +24,15 @@ export default function AboutHero() {
           <div className="w-full">
             <div className="content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.25rem] w-full">
               <FadeInSection delay={0.3} className="flex flex-col gap-[1.25rem]">
-                <Image src="content/content1.svg" alt="content" width={344} height={198} priority />
-                <Image src="content/content2.svg" alt="content" width={344} height={198} priority />
+                <Image src="/content/content1.png" alt="content" width={344} height={198} priority />
+                <Image src="/content/content2.png" alt="content" width={344} height={198} priority />
               </FadeInSection>
               <FadeInSection delay={0.3}>
-                <Image src="content/content3.svg" alt="content" width={344} height={416} priority />
+                <Image src="/content/content3.png" alt="content" width={344} height={416} priority />
               </FadeInSection>
               <FadeInSection delay={0.3} className="flex flex-col gap-[1.25rem] hidden lg:flex">
-                <Image src="content/content4.svg" alt="content" width={344} height={198} priority />
-                <Image src="content/content5.svg" alt="content" width={344} height={198} priority />
+                <Image src="/content/content4.png" alt="content" width={344} height={198} priority />
+                <Image src="/content/content5.png" alt="content" width={344} height={198} priority />
               </FadeInSection>
             </div>
           </div>
