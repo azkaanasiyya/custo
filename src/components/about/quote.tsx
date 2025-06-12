@@ -12,7 +12,7 @@ export default function AboutQuote() {
 
             <FadeInSection stagger={0.3} className="w-full lg:w-auto">
               <Image
-                src="quote.svg"
+                src="/quote.png"
                 alt="quote"
                 className="w-full h-auto"
                 width={435}
