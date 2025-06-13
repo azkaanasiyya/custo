@@ -24,15 +24,15 @@ export default function AboutHero() {
           <div className="w-full">
             <div className="content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.25rem] w-full">
               <FadeInSection delay={0.3} className="flex flex-col gap-[1.25rem]">
-                <Image src="/content/content1.png" alt="content" width={344} height={198} priority />
-                <Image src="/content/content2.png" alt="content" width={344} height={198} priority />
+                <Image src="/content/content1.png" alt="content" width={344} height={198}  />
+                <Image src="/content/content2.png" alt="content" width={344} height={198}  />
               </FadeInSection>
               <FadeInSection delay={0.3}>
-                <Image src="/content/content3.png" alt="content" width={344} height={416} priority />
+                <Image src="/content/content3.png" alt="content" width={344} height={416}  />
               </FadeInSection>
               <FadeInSection delay={0.3} className="flex flex-col gap-[1.25rem] hidden lg:flex">
-                <Image src="/content/content4.png" alt="content" width={344} height={198} priority />
-                <Image src="/content/content5.png" alt="content" width={344} height={198} priority />
+                <Image src="/content/content4.png" alt="content" width={344} height={198}  />
+                <Image src="/content/content5.png" alt="content" width={344} height={198}  />
               </FadeInSection>
             </div>
           </div>
@@ -46,11 +46,11 @@ export default function AboutHero() {
                 {Array.from({ length: 6 }).map((_, i) => (
                   <Image
                     key={i}
-                    src={`client/client${i + 1}.svg`}
+                    src={`/client/client${i + 1}.png`}
                     alt={`client${i + 1}`}
-                    width={154}
+                    width={141}
                     height={28}
-                    priority
+                    className="w-[141px] h-[28px]"
                   />
                 ))}
               </div>
