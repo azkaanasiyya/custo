@@ -1,27 +1,20 @@
 import Image from "next/image";
 import { teamMembers } from "../data/team";
 import Header from "../common/header";
-import SlideFadeIn from "../animation/on-scroll/SlideFadeIn";
+import FadeInSection from "../animation/fadeIn";
 
 export default function AboutTeam() {
   return (
     <div className="team-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center">
-      <SlideFadeIn
-        items={[
-          { selector: "[data-animate='hero']", direction: "y", from: 100 },
-        ]}
-        staggerDelay={0.15}
-      >
         <div className="container max-w-[67rem] w-full mx-auto flex flex-col lg:justify-center items-center gap-[4rem]">
-          <div data-animate="hero">
+          <FadeInSection delay={0.3}>
             <Header
               title="The Peoples Behind Custo"
               description="Together, we turn bold ideas into powerful tools for modern businesses."
             />
-          </div>
-
-          <div data-animate="hero">
-              <div className="team grid grid-cols-2 lg:grid-cols-4 w-full gap-[1.25rem]">
+          </FadeInSection>  
+            
+          <FadeInSection delay={0.5} className="team grid grid-cols-2 lg:grid-cols-4 w-full gap-[1.25rem]">
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
@@ -41,11 +34,8 @@ export default function AboutTeam() {
                   </div>
                 </div>
               ))}
-              </div>
-          </div>
-          
+              </FadeInSection>
         </div>
-      </SlideFadeIn>
     </div>
   );
 }
