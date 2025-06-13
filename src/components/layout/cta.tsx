@@ -2,20 +2,13 @@
 
 import Header from "@/components/common/header";
 import { Button } from "../ui/button";
-import SlideFadeIn from "../animation/on-scroll/SlideFadeIn";
+import FadeInSection from "../animation/fadeIn";
 
 export default function CTA() {
     return (
         <div className="p-2">
             <div className="cta bg-[url('/background/bg-cta.png')] bg-no-repeat bg-cover bg-center rounded-[12px] py-16 px-6 md:p-16 flex flex-col justify-center items-center">
-                <SlideFadeIn
-                    items={[
-                        { selector: ".cta-header", from: 40, direction: "y" },
-                        { selector: ".cta-button", from: 40, direction: "y" }
-                    ]}
-                    staggerDelay={0.1}
-                >
-                    <div className="container max-w-[67rem] md:py-10 flex flex-col gap-8 justify-center items-center">
+                    <FadeInSection delay={0.5} className="container max-w-[67rem] md:py-10 flex flex-col gap-8 justify-center items-center">
                         <div className="cta-header">
                             <Header
                                 title="Start Growing with Custo Now"
@@ -28,8 +21,7 @@ export default function CTA() {
                                 Start for Free
                             </Button>
                         </div>
-                    </div>
-                </SlideFadeIn>
+                    </FadeInSection>
             </div>
         </div>
     );
