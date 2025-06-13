@@ -11,6 +11,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Modal } from "../modal/modal";
 
 export default function Testimonial() {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
@@ -49,13 +50,13 @@ export default function Testimonial() {
           <div className="relative w-full">
             <button
             ref={prevRefDesktop}
-            className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition items-center justify-center"
+            className="hidden lg:flex cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition items-center justify-center"
             >
               <i className="ri-arrow-left-line text-black text-l-regular"></i>
             </button>
             <button
             ref={nextRefDesktop}
-            className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition items-center justify-center"
+            className="hidden lg:flex cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition items-center justify-center"
             >
               <i className="ri-arrow-right-line text-black text-l-regular"></i>
             </button>
@@ -103,6 +104,7 @@ export default function Testimonial() {
                             fill
                             className="object-cover"
                           />
+                          <Modal></Modal>
                         </div>
                       </div>
                       <div className="w-full md:w-1/2 lg:w-full">
@@ -135,13 +137,13 @@ export default function Testimonial() {
             <div className="flex lg:hidden justify-center gap-4 mt-6">
               <button
                 ref={prevRefMobile}
-                className="bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition flex items-center justify-center"
+                className="bg-white border cursor-pointer border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition flex items-center justify-center"
               >
                 <i className="ri-arrow-left-line text-black text-l-regular"></i>
               </button>
               <button
                 ref={nextRefMobile}
-                className="bg-white border border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition flex items-center justify-center"
+                className="bg-white border cursor-pointer border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition flex items-center justify-center"
               >
                 <i className="ri-arrow-right-line text-black text-l-regular"></i>
               </button>
