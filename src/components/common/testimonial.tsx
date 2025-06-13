@@ -7,7 +7,6 @@ import testimonials from "../data/testimonials";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import FadeInSection from "../animation/fadeIn";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -42,12 +41,10 @@ export default function Testimonial() {
   return (
     <div className="testimonial-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center overflow-x-hidden">
         <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
-           <FadeInSection delay={0.3}>
-              <Header
+           <Header
                 title="Real Stories from Real Users"
                 description="Hear how Custo has helped businesses close more deals, collaborate better, and stay organized."
               />
-           </FadeInSection>
            
           <div className="relative w-full">
             <button
