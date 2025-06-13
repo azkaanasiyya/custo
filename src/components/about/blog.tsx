@@ -5,7 +5,7 @@ import Header from "@/components/common/header";
 import { Button } from "../ui/button";
 import BlogList from "../common/bloglist";
 import Link from "next/link";
-import SlideFadeIn from "../animation/on-scroll/SlideFadeIn";
+import FadeInSection from "../animation/fadeIn";
 
 export default function AboutBlog() {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
@@ -17,14 +17,6 @@ export default function AboutBlog() {
 
   return (
     <div className="blog-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-4 flex flex-col justify-center items-center">
-      <SlideFadeIn
-        items={[
-          { selector: "[data-animate='header']", direction: "y", from: 50 },
-          { selector: "[data-animate='bloglist']", direction: "y", from: 50 },
-          { selector: "[data-animate='button']", direction: "y", from: 50 },
-        ]}
-        staggerDelay={0.15}
-      >
         <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
           <Header
             title="The Custo Journal"
@@ -32,19 +24,18 @@ export default function AboutBlog() {
             data-animate="header"
           />
 
-          <div data-animate="bloglist">
+          <FadeInSection delay={0.5}>
             <BlogList limit={limit} />
-          </div>
+          </FadeInSection>
 
-          <div data-animate="button">
+          <FadeInSection delay={0.5}>
             <Link href="/blog">
               <Button variant="Secondary" size="small">
                 Explore More
               </Button>
             </Link>
-          </div>
+          </FadeInSection>
         </div>
-      </SlideFadeIn>
     </div>
   );
 }

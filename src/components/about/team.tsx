@@ -7,12 +7,10 @@ export default function AboutTeam() {
   return (
     <div className="team-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center">
         <div className="container max-w-[67rem] w-full mx-auto flex flex-col lg:justify-center items-center gap-[4rem]">
-          <FadeInSection delay={0.3}>
-            <Header
+          <Header
               title="The Peoples Behind Custo"
               description="Together, we turn bold ideas into powerful tools for modern businesses."
-            />
-          </FadeInSection>  
+            /> 
             
           <FadeInSection delay={0.5} className="team grid grid-cols-2 lg:grid-cols-4 w-full gap-[1.25rem]">
               {teamMembers.map((member, index) => (
