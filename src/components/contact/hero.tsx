@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import SlideFadeIn from "../animation/on-scroll/SlideFadeIn"
+import FadeInSection from "../animation/fadeIn"
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -43,26 +43,19 @@ export default function ContactHero() {
   return (
     <div className="p-2">
       <div className="hero-section bg-[url('/background/bg-pricing.png')] bg-cover bg-center rounded-[12px] pt-40 pb-12 md:pb-20 lg:pb-[6.5rem] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
-        <SlideFadeIn
-          items={[
-            { selector: "[data-animate='header']", direction: "y", from: 60 },
-            { selector: "[data-animate='form']", direction: "y", from: 60 },
-          ]}
-          staggerDelay={0.2}
-        >
           <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-10">
-            <div className="header flex flex-col gap-4 justify-center items-center" data-animate="header">
+            <FadeInSection delay={0.3} className="header flex flex-col gap-4 justify-center items-center" data-animate="header">
               <div className="text-[32px] md:text-[48px] lg:text-[56px] leading-[120%] font-semibold text-grayscale-950 text-center">
                 <h1>Get in Touch</h1>
               </div>
               <p className="text-xlarge max-w-[470px] text-center text-gray-600">
                 Whether you have a question, need support, or just want to say hello, we’re here and ready to help.
               </p>
-            </div>
+            </FadeInSection>
 
             <FormProvider {...methods}>
               <Form handleSubmit={methods.handleSubmit(onSubmit)}>
-                <div
+                <FadeInSection delay={0.5}
                   className="form p-5 md:p-7 w-full lg:w-[708px] bg-white rounded-[1.25rem] border border-grayscale-200 flex flex-col gap-5"
                   data-animate="form"
                 >
@@ -138,11 +131,10 @@ export default function ContactHero() {
                   <Button type="submit" variant="primary" size="base" className="cursor-pointer">
                     Send Message
                   </Button>
-                </div>
+                </FadeInSection>
               </Form>
             </FormProvider>
           </div>
-        </SlideFadeIn>
       </div>
     </div>
   )
