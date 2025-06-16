@@ -26,6 +26,7 @@ const formSchema = z.object({
 export default function ContactHero() {
   const methods = useForm({
     resolver: zodResolver(formSchema),
+    mode: "onChange",
     defaultValues: {
       firstName: "",
       lastName: "",
