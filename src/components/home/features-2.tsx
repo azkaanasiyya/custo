@@ -122,7 +122,7 @@ export default function Features2() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]">
           <div className="relative">
-            <div className="relative rounded-[1.25rem]">
+            <FadeInSection className="relative rounded-[1.25rem]">
               <Image
                 src="/features/Background.png"
                 alt=""
@@ -130,8 +130,8 @@ export default function Features2() {
                 height={440}
                 className="hidden lg:block "
               />
-            </div>
-            <div className="absolute top-9 translate-y-1/2 left-25">
+            </FadeInSection>
+            <FadeInSection className="absolute top-9 translate-y-1/2 left-25">
               <Image
                 src="/features/img-2/Component-4.png"
                 alt=""
@@ -139,8 +139,8 @@ export default function Features2() {
                 height={60}
                 className="hidden lg:block"
               />
-            </div>
-            <div className="absolute  top-5 translate-y-1/2 translate-x-1/2 -left-6">
+            </FadeInSection>
+            <FadeInSection className="absolute  top-5 translate-y-1/2 translate-x-1/2 -left-6">
               <Image
                 src="/features/img-2/Component-5.png"
                 alt=""
@@ -148,8 +148,8 @@ export default function Features2() {
                 height={232}
                 className="hidden lg:block "
               />
-            </div>
-            <div className="absolute top-16 translate-y-1/2 translate-x-1/2 left-65">
+            </FadeInSection>
+            <FadeInSection delay={0.2} className="absolute top-16 translate-y-1/2 translate-x-1/2 left-65">
               <Image
                 src="/features/img-2/Cursor-1.png"
                 alt=""
@@ -157,8 +157,8 @@ export default function Features2() {
                 height={56}
                 className="hidden lg:block "
               />
-            </div>
-            <div className="absolute top-65 translate-y-1/2 translate-x-1/2 left-40">
+            </FadeInSection>
+            <FadeInSection className="absolute top-65 translate-y-1/2 translate-x-1/2 left-40">
               <Image
                 src="/features/img-2/Cursor-2.png"
                 alt=""
@@ -166,7 +166,7 @@ export default function Features2() {
                 height={56}
                 className="hidden lg:block "
               />
-            </div>
+            </FadeInSection>
           </div>
           <div className="flex flex-col gap-[1rem]">
             <p className="text-xl-medium text-[1rem] md:text-[1.125rem] text-primary-500">
@@ -233,7 +233,7 @@ export default function Features2() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]">
           <div className="relative">
-            <div className="relative rounded-[1.25rem]">
+            <FadeInSection className="relative rounded-[1.25rem]">
               <Image
                 src="/features/Background.png"
                 alt=""
@@ -241,8 +241,8 @@ export default function Features2() {
                 height={440}
                 className="hidden lg:block "
               />
-            </div>
-            <div className="absolute top-1/2  -translate-y-1/2">
+            </FadeInSection>
+            <FadeInSection className="absolute top-1/2  -translate-y-1/2">
               <Image
                 src="/features/img-3/Component-6.png"
                 alt=""
@@ -250,7 +250,7 @@ export default function Features2() {
                 height={440}
                 className="hidden lg:block"
               />
-            </div>
+            </FadeInSection>
           </div>
           <div className="flex flex-col gap-[1rem]">
             <p className="text-xl-medium text-[1rem] md:text-[1.125rem] text-primary-500">
