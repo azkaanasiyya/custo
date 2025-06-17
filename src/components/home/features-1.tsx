@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Features1() {
   return (
-    <div className="flex w-full justify-center">
-      <div className="flex flex-col gap-[3rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop py-[3rem] md:py-[5rem] lg:py-[6.5rem]">
+    <div className="flex justify-center py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-16">
+      <div className="flex flex-col gap-[3rem] max-w-mobile md:max-w-tablet lg:max-w-desktop">
         <div className="mx-auto">
           <Header
             title="Elevate Business Growth"

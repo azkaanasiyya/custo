@@ -3,8 +3,8 @@ import { stats } from "../data/stats";
 
 export default function HomeStats() {
   return (
-    <div className="flex w-full justify-center">
-      <div className="flex flex-col md:flex-row md:gap-[1.25rem] lg:gap-[3rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop py-[1.25rem] md:py-[4rem]">
+    <div className="flex justify-center px-6 py-12 md:px-12 md:py-16 lg:p-16">
+      <div className="flex flex-col md:flex-row md:gap-[1.25rem] lg:gap-[3rem] max-w-mobile md:max-w-tablet lg:max-w-desktop">
         {stats.map((stat, index) => (
           <FadeInSection delay={0.5} key={index}>
             <div className="flex flex-col gap-[1.25rem] items-center py-[1.25rem] md:py-0">
