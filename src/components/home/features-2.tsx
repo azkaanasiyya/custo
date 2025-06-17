@@ -3,12 +3,12 @@ import FadeInSection from "../animation/fadeIn";
 
 export default function Features2() {
   return (
-    <div className="flex w-full justify-center py-[6.5rem]">
+    <div className="flex justify-center py-12 px-6 md:py-20 md:px-12 lg:px-16 lg:py-[6.5rem]">
       <div className="flex flex-col gap-[4rem] md:gap-[5rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]">
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <FadeInSection delay={0.2}>
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 <Image
                   src="/features/Background.png"
                   alt=""
@@ -26,7 +26,7 @@ export default function Features2() {
                   className="hidden lg:block "
                 />
               </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -left-20">
+              <div className="absolute top-1/2 -translate-y-1/2 -left-20">
                 <Image
                   src="/features/img-1/Component-2.png"
                   alt=""
@@ -35,16 +35,7 @@ export default function Features2() {
                   className="hidden lg:block "
                 />
               </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -left-20">
-                <Image
-                  src="/features/img-1/Component-2.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -right-0">
+              <div className="absolute top-1/2 -translate-y-1/2 -right-0">
                 <Image
                   src="/features/img-1/Component-3.png"
                   alt=""
@@ -70,65 +61,45 @@ export default function Features2() {
           </div>
 
           <div className="w-full h-[317px] md:h-[667px] relative lg:hidden block">
-            <div className="relative">
-              <div className="relative rounded-[1.25rem]">
-                <Image
-                  src="/features/Background.png"
-                  alt=""
-                  width={454}
-                  height={440}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -left-20">
-                <Image
-                  src="/features/img-1/Component-2.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -left-20">
-                <Image
-                  src="/features/img-1/Component-2.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute top-1/2 left-55 -translate-x-1/2 -translate-y-1/2">
-                <Image
-                  src="/features/img-1/Component-1.png"
-                  alt=""
-                  width={240}
-                  height={282}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -right-0">
-                <Image
-                  src="/features/img-1/Component-3.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-            </div>
+            <Image
+              src="/features/Background.png"
+              alt=""
+              fill
+              className="object-cover rounded-[1.25rem]"
+            />
+            <Image
+              src="/features/img-1/Component-2.png"
+              alt=""
+              width={168}
+              height={122}
+              className="absolute top-1/2 left-2 -translate-y-1/2"
+            />
+            <Image
+              src="/features/img-1/Component-1.png"
+              alt=""
+              width={240}
+              height={282}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+            <Image
+              src="/features/img-1/Component-3.png"
+              alt=""
+              width={168}
+              height={122}
+              className="absolute top-1/2 right-2 -translate-y-1/2"
+            />
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]">
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <FadeInSection className="relative rounded-[1.25rem]">
               <Image
                 src="/features/Background.png"
                 alt=""
                 width={454}
                 height={440}
-                className="hidden lg:block "
+                className="hidden lg:block rounded-[1.25rem]"
               />
             </FadeInSection>
             <FadeInSection className="absolute top-9 translate-y-1/2 left-25">
@@ -140,7 +111,7 @@ export default function Features2() {
                 className="hidden lg:block"
               />
             </FadeInSection>
-            <FadeInSection className="absolute  top-5 translate-y-1/2 translate-x-1/2 -left-6">
+            <FadeInSection className="absolute top-5 translate-y-1/2 translate-x-1/2 -left-6">
               <Image
                 src="/features/img-2/Component-5.png"
                 alt=""
@@ -180,69 +151,56 @@ export default function Features2() {
               notes, and real-time updates
             </p>
           </div>
-          <div className="w-full h-[317px] md:h-[667px] relative lg:hidden block">
-            <div className="relative">
-              <div className="relative rounded-[1.25rem]">
-                <Image
-                  src="/features/Background.png"
-                  alt=""
-                  width={454}
-                  height={440}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -left-20">
-                <Image
-                  src="/features/img-1/Component-2.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -left-20">
-                <Image
-                  src="/features/img-1/Component-2.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute top-1/2 left-55 -translate-x-1/2 -translate-y-1/2">
-                <Image
-                  src="/features/img-1/Component-1.png"
-                  alt=""
-                  width={240}
-                  height={282}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -right-0">
-                <Image
-                  src="/features/img-1/Component-3.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-            </div>
+          <div className="w-full h-[317px] md:h-[667px] relative lg:hidden block overflow-hidden">
+            <Image
+              src="/features/Background.png"
+              alt=""
+              fill
+              className="object-cover rounded-[1.25rem]"
+            />
+            <Image
+              src="/features/img-2/Component-5.png"
+              alt=""
+              width={240}
+              height={232}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2"
+            />
+            <Image
+              src="/features/img-2/Component-4.png"
+              alt=""
+              width={240}
+              height={60}
+              className="absolute top-1/2 -translate-x-1/2 left-1/2"
+            />
+            <Image
+              src="/features/img-2/Cursor-1.png"
+              alt=""
+              width={90}
+              height={56}
+              className="absolute top-16 right-12"
+            />
+            <Image
+              src="/features/img-2/Cursor-2.png"
+              alt=""
+              width={84}
+              height={56}
+              className="absolute bottom-65 left-12"
+            />
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]">
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <FadeInSection className="relative rounded-[1.25rem]">
               <Image
                 src="/features/Background.png"
                 alt=""
                 width={454}
                 height={440}
-                className="hidden lg:block "
+                className="hidden lg:block rounded-[1.25rem]"
               />
             </FadeInSection>
-            <FadeInSection className="absolute top-1/2  -translate-y-1/2">
+            <FadeInSection className="absolute top-1/2 -translate-y-1/2">
               <Image
                 src="/features/img-3/Component-6.png"
                 alt=""
@@ -265,53 +223,19 @@ export default function Features2() {
             </p>
           </div>
           <div className="w-full h-[317px] md:h-[667px] relative lg:hidden block">
-            <div className="relative">
-              <div className="relative rounded-[1.25rem]">
-                <Image
-                  src="/features/Background.png"
-                  alt=""
-                  width={454}
-                  height={440}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -left-20">
-                <Image
-                  src="/features/img-1/Component-2.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -left-20">
-                <Image
-                  src="/features/img-1/Component-2.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute top-1/2 left-55 -translate-x-1/2 -translate-y-1/2">
-                <Image
-                  src="/features/img-1/Component-1.png"
-                  alt=""
-                  width={240}
-                  height={282}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute  top-1/2 -translate-y-1/2 -right-0">
-                <Image
-                  src="/features/img-1/Component-3.png"
-                  alt=""
-                  width={168}
-                  height={122}
-                  className="hidden lg:block "
-                />
-              </div>
-            </div>
+            <Image
+              src="/features/Background.png"
+              alt=""
+              fill
+              className="object-cover rounded-[1.25rem]"
+            />
+            <Image
+              src="/features/img-3/Component-6.png"
+              alt=""
+              width={454}
+              height={440}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
           </div>
         </div>
       </div>
