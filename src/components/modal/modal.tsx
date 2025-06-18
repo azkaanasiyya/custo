@@ -3,15 +3,22 @@ import {
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { Button } from "../ui/button";
+import Image from "next/image";
 
 export function Modal() {
   return (
     <Dialog>
       <form>
         <DialogTrigger asChild>
-            <button className="cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12 bg-white opacity-40 rounded-full hover:bg-grayscale-200 transition">
-                <i className="ri-play-fill text-white text-[24px]"></i>
-            </button>
+            <Button
+              variant="testimonial"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer"
+              size="testimonial"
+              >
+                {/* <i className="ri-play-fill text-white text-2xl z-999"></i> */}
+                <Image src="/play.png" alt="play" width={24} height={24} />
+            </Button>
         </DialogTrigger>
         <DialogContent className="w-[80vw] h-[80vh] aspect-video max-w-none max-h-none">
           <video 
