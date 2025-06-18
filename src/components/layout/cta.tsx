@@ -13,7 +13,7 @@ export default function CTA() {
                             <Header
                                 title="Start Growing with Custo Now"
                                 description="Take control of your sales pipeline, automate tasks, and build stronger customer relationships with ease."
-                                className="max-w-[576px] text-center"
+                                className="max-w-[590px] text-center"
                             />
                         </div>
                         <div className="cta-button w-full md:w-auto">
