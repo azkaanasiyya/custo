@@ -16,7 +16,7 @@ export default function HomeHero() {
               className="flex flex-col gap-[2rem] items-center"
             >
               <div>
-                <button className="inline-flex items-center gap-[0.5rem] rounded-[5rem] bg-radial-[at_0%_0%] from-success-700 to-success-700/50 to-99% px-[1rem] border-[0.5px] border-white/40">
+                <button className="inline-flex items-center gap-2 h-7 rounded-[5rem] bg-radial-[at_0%_0%] from-success-700 to-success-700/50 to-99% px-4 border-[0.5px] border-white/40">
                   <span className="text-s-medium text-gray-950">
                     Introducing Custo
                   </span>
