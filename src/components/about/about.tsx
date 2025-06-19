@@ -27,7 +27,7 @@ export default function About() {
                 <Image src="/user.svg" alt="list" width={48} height={48} />
                 <div className="flex flex-col gap-[0.75rem]">
                   <div className="typography text-grayscale-950">
-                    <h4 className="text-[20px] lg:text-[24px] font-semibold">People First</h4>
+                    <h4 className="text-[20px] lg:text-[50px] font-semibold">People First</h4>
                   </div>
                   <p className="text-medium md:text-large text-grayscale-600">
                     Our users, team, and community come before everything else. When people thrive, so does our work.
