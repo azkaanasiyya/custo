@@ -49,17 +49,17 @@ export default function Navbar() {
           <ul className="hidden md:flex flex-1 justify-start gap-2 cursor-pointer">
             <li className="px-3 py-2">
               <Link href="/about">
-                <p className="text-grayscale-950">About</p>
+                <p className="text-medium text-grayscale-950">About</p>
               </Link>
             </li>
             <li className="px-3 py-2">
               <Link href="/pricing">
-                <p className="text-grayscale-950">Pricing</p>
+                <p className="text-medium text-grayscale-950">Pricing</p>
               </Link>
             </li>
             <li className="px-3 py-2">
               <Link href="/blog">
-                <p className="text-grayscale-950">Blog</p>
+                <p className="text-medium text-grayscale-950">Blog</p>
               </Link>
             </li>
           </ul>
