@@ -4,10 +4,10 @@ import { stats } from "../data/stats";
 export default function HomeStats() {
   return (
     <div className="flex justify-center px-6 py-12 md:px-12 md:py-16 lg:p-16">
-      <div className="flex flex-col md:flex-row md:gap-[1.25rem] lg:gap-[3rem] max-w-mobile md:max-w-tablet lg:max-w-desktop">
+      <div className="flex flex-col md:flex-row md:gap-[1.25rem] lg:gap-[40px] items-strech max-w-mobile md:max-w-tablet lg:max-w-desktop">
         {stats.map((stat, index) => (
           <FadeInSection delay={0.5} key={index}>
-            <div className="flex flex-col gap-[1.25rem] border-b-[1px] border-b-grayscale-200 items-center py-[1.25rem] md:py-0">
+            <div className="flex flex-col gap-[1.25rem] h-full border-b-[1px] border-b-grayscale-200 items-center py-[1.25rem] md:py-0">
               <h2 className="font-sans font-semibold leading-[140%] text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] pt-5 md:pt-10 text-primary-500">
                 {stat.value}
               </h2>
