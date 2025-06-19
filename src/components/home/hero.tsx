@@ -25,7 +25,7 @@ export default function HomeHero() {
               </div>
               <div className="flex flex-col gap-[1rem] text-center max-w-[55.75rem] mx-auto">
                 <div>
-                  <h1 className="text-h1 text-[2rem] md:text-[3rem]">
+                  <h1 className="text-h1 text-[2rem] md:text-[3rem] lg:text-[56px] lg:font-semibold text-grayscale-950">
                     Powerful CRM Solutions for Growing Businesses
                   </h1>
                 </div>
@@ -61,7 +61,7 @@ export default function HomeHero() {
               </div>
               <div className="flex flex-row gap-[1.5rem] items-center">
                 <div className="typography">
-                  <h2 className="text-shadow-gray-900">4.9</h2>
+                  <h2 className="text-[36px] lg:text-[40px] text-[#181b25] font-semibold">4.9</h2>
                 </div>
                 <div className="flex flex-col gap-1">
                   <Image
