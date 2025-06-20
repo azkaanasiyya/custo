@@ -11,7 +11,11 @@ export default function CTA() {
                     <FadeInSection delay={0.5} className="container max-w-[67rem] md:py-10 flex flex-col gap-8 justify-center items-center">
                         <div className="cta-header">
                             <Header
-                                title="Start Growing with Custo Now"
+                                title={
+                                    <>
+                                      Start Growing <br className="block md:hidden"/> with Custo Now  
+                                    </>
+                                }
                                 description="Take control of your sales pipeline, automate tasks, and build stronger customer relationships with ease."
                                 className="max-w-[590px] text-center"
                             />

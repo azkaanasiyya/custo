@@ -1,7 +1,8 @@
+import React from "react";
 import FadeInSection from "../animation/fadeIn";
 
 interface HeaderProps {
-  title: string;
+  title: React.ReactNode;
   description?: string;
   className?: string;
 }
