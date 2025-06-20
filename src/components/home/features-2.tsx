@@ -54,7 +54,7 @@ export default function Features2() {
             <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
               Understand Your Business Like Never Before
             </h2>
-            <p className="text-xl-regular text-grayscale-600">
+            <p className="text-[16px] leading-[160%] md:text-xl-regular text-grayscale-600">
               Get real-time insights into sales performance, customer behavior,
               and business growth.
             </p>
@@ -146,7 +146,7 @@ export default function Features2() {
             <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
               Empower Your Team with Real-Time Sync
             </h2>
-            <p className="text-xl-regular text-grayscale-600">
+            <p className="text-[16px] leading-[160%] md:text-xl-regular text-grayscale-600">
               Collaborate effortlessly with your team by sharing information,
               notes, and real-time updates
             </p>
@@ -217,7 +217,7 @@ export default function Features2() {
             <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
               Manage Emails Without Leaving Your CRM
             </h2>
-            <p className="text-xl-regular text-grayscale-600">
+            <p className="text-[16px] leading-[160%] md:text-xl-regular text-grayscale-600">
               Sync with your email to send, receive, and track conversations
               directly from the CRM.
             </p>

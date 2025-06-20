@@ -17,7 +17,7 @@ const buttonVariants = cva(
           "bg-[#FFFFFF66] hover:bg-grayscale-100",
       },
       size: {
-        base: "px-[24px] py-[11px] font-sans font-medium text-[1rem] rounded-[80px]",
+        base: "px-[24px] py-[11px] font-sans font-medium text-[14px] md:text-[1rem] rounded-[80px]",
         small:
           "px-[20px] py-[9px] font-sans font-medium text-[0.875rem] rounded-[80px]",
         icon: "size-9",
