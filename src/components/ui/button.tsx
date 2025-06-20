@@ -25,6 +25,8 @@ const buttonVariants = cva(
           "w-[48px] h-[48px] rounded-full",
         notfound: 
         "px-[20px] h-[40px] font-sans font-medium text-[12px] md:text-[14px] rounded-[80px]",
+        pricing:
+        "px-[20px] py-[9px] font-sans font-medium text-[12px] rounded-[80px]"
       },
     },
     defaultVariants: {

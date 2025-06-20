@@ -31,7 +31,7 @@ export default function PricingHero() {
         <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-10">
           <FadeInSection stagger={0.15} variant="bottom-to-top" className="w-full flex flex-col justify-center items-center">
             <div className="header flex flex-col gap-4 justify-center items-center">
-              <h1 className="text-h1 md:text-[48px] lg:text-[56px] leading-[120%] font-semibold text-grayscale-950 text-center max-w-[550px]">
+              <h1 className="text-[32px] md:text-[48px] lg:text-[56px] leading-[120%] font-semibold text-grayscale-950 text-center max-w-[550px]">
                 Designed for Sustainable Growth
               </h1>
               <p className="text-large md:text-xlarge max-w-[41rem] text-center text-gray-600">
@@ -87,14 +87,14 @@ export default function PricingHero() {
 
                   <div className="card flex flex-col gap-5 md:gap-8 w-full rounded-[1.25rem] border p-5 md:p-7 bg-white border-grayscale-200">
                     <div className="flex flex-col gap-1 md:gap-3">
-                      <p className="text-medium md:text-xlarge font-medium text-grayscale-950">
+                      <p className="text-[16px] md:text-xlarge font-medium text-grayscale-950">
                         {plan.name}
                       </p>
                       <div className="flex flex-row items-end gap-3">
-                        <h2 className="text-[28px] md:text-[48px] font-semibold leading-[140%]">
+                        <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-semibold leading-[140%]">
                           {plan.price}
                         </h2>
-                        <p className="text-medium md:text-xlarge text-grayscale-600">
+                        <p className="text-[16px] md:text-xlarge text-grayscale-600">
                           {plan.note}
                         </p>
                       </div>
@@ -103,7 +103,7 @@ export default function PricingHero() {
                       </p>
                     </div>
 
-                    <Button variant={plan.variant} size="small">
+                    <Button variant={plan.variant} size="pricing">
                       Get Started
                     </Button>
 
