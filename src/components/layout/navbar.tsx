@@ -43,7 +43,7 @@ export default function Navbar() {
             className="cursor-pointer"
             onClick={() => setIsOpen(false)}
           >
-            <Image src="/logo/Logo.svg" alt="Logo" width={92} height={24} />
+            <Image src="/logo/Logo.svg" alt="Logo" width={92} height={24} className="w-[77.33px] h-5 md:w-[5.75rem] md:h-6" />
           </Link>
 
           <ul className="hidden md:flex flex-1 justify-start gap-2 cursor-pointer">

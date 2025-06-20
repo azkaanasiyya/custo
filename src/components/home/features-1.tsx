@@ -47,8 +47,8 @@ export default function Features1() {
               width={500}
               height={300}
             />
-            <div className="flex flex-row gap-[1.5rem] items-center">
-              <div className="hidden md:block p-[0.75rem] rounded-full h-[3rem] bg-radial-[at_50%_100%] from-[#6D7A97] to-grayscale-950 to-50%">
+            <div className="flex flex-row gap-[1.5rem] items-start md:items-center">
+              <div className="p-[0.75rem] rounded-full h-[3rem] bg-radial-[at_50%_100%] from-[#6D7A97] to-grayscale-950 to-50%">
                 <Image
                   src="/icon/CalendarBlank-Bulk.svg"
                   alt=""

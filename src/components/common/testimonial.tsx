@@ -108,7 +108,7 @@ export default function Testimonial() {
                         </div>
                       </div>
                       <div className="w-full md:w-1/2 lg:w-full">
-                        <div className="flex flex-col gap-8 p-6 md:p-8 rounded-[20px] border border-grayscale-200 shadow bg-white">
+                        <div className="flex flex-col gap-6 md:gap-8 p-6 md:p-8 rounded-[20px] border border-grayscale-200 shadow bg-white">
                           <Image
                             src={item.stars}
                             alt="stars"

@@ -8,7 +8,7 @@ export default function HomeStats() {
         {stats.map((stat, index) => (
           <FadeInSection delay={0.5} key={index}>
             <div className="flex flex-col gap-[1.25rem] h-full border-b-[1px] border-b-grayscale-200 items-center py-[1.25rem] md:py-0">
-              <h2 className="font-sans font-semibold leading-[140%] text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] pt-5 md:pt-10 text-primary-500">
+              <h2 className="font-sans font-semibold leading-[140%] text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] md:pt-10 text-primary-500">
                 {stat.value}
               </h2>
               <div className="flex flex-col gap-2 items-center">
