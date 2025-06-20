@@ -23,6 +23,8 @@ const buttonVariants = cva(
         icon: "size-9",
         testimonial: 
           "w-[48px] h-[48px] rounded-full",
+        notfound: 
+        "px-[20px] h-[40px] font-sans font-medium text-[12px] md:text-[14px] rounded-[80px]",
       },
     },
     defaultVariants: {
