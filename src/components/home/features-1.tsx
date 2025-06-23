@@ -12,13 +12,14 @@ export default function Features1() {
             description="Scale your business effortlessly with a powerful and intuitive CRM solutions."
           />
         </div>
-        <FadeInSection delay={0.5} className="flex flex-col lg:flex-row justify-between items-center p-[1.25rem] md:p-[2rem] lg:p-[2.5rem] rounded-[1.25rem] border border-gray-200 shadow-[0_0_8px_rgba(0,0,0,0.10)] gap-[2.5rem]">
-          <div className="flex flex-col gap-[2rem]">
+        <FadeInSection delay={0.5} className="flex flex-col lg:flex-row justify-between items-center p-[1.25rem] md:p-[2rem] lg:p-[2.5rem] rounded-[1.25rem] border border-gray-200 shadow-[0_0_8px_rgba(0,0,0,0.10)] gap-8 lg:gap-[2.5rem]">
+          <div className="flex flex-col gap-[2rem] pr-0 pb-5 md:pb-8 lg:pb-0 lg:pr-[2.5rem] border-b lg:border-b-0 lg:border-r border-grayscale-200">
             <Image
               src="/image/Image.svg"
               alt="Description of the image"
               width={500}
               height={300}
+              className="w-[287px] h-[196.56px] md:w-[608px] md:h-[416.46px] lg:w-[500px] lg:h-[300px]"
             />
             <div className="flex flex-row gap-[1.5rem] items-start md:items-center">
               <Image
@@ -38,13 +39,13 @@ export default function Features1() {
               </div>
             </div>
           </div>
-          <div className="w-px h-full bg-grayscale-200" />
           <div className="flex flex-col gap-[2rem]">
             <Image
               src="/image/Image (1).svg"
               alt="Description of the image"
               width={500}
               height={300}
+              className="w-[287px] h-[196.56px] md:w-[608px] md:h-[416.46px] lg:w-[500px] lg:h-[300px]"
             />
             <div className="flex flex-row gap-[1.5rem] items-start md:items-center">
               <Image
