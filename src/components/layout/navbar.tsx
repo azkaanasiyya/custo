@@ -91,48 +91,77 @@ export default function Navbar() {
           isOpen && isMobile ? "block" : "hidden"
         }`}
       ></div>
-      {isOpen && (
+          {isOpen && isMobile && (
+      <>
         <div
-          className="bg-white md:hidden w-full py-[1.25rem]"
+          className="fixed inset-0 bg-[#0E121B33] z-[90]"
+          onClick={() => setIsOpen(false)}
+        />
+
+        <div
+          className="fixed top-0 left-0 w-full bg-white md:hidden py-[1.25rem] z-[100]"
           ref={containerRef}
           style={{ display: "none" }}
         >
-          <div className="flex flex-col gap-5 justify-center items-center max-w-mobile mx-auto">
-            <ul
-              className="flex flex-col gap-[1rem] text-center"
-              ref={menuItemsRef}
-            >
-              <li>
-                <Link href="/about" onClick={() => setIsOpen(false)}>
-                  <p className="text-grayscale-950 py-[0.5]">About</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" onClick={() => setIsOpen(false)}>
-                  <p className="text-grayscale-950 py-[0.5]">Pricing</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" onClick={() => setIsOpen(false)}>
-                  <p className="text-grayscale-950 py-[0.5]">Blog</p>
-                </Link>
-              </li>
-            </ul>
-            <div className="flex flex-col gap-3 w-full" ref={buttonsRef}>
-              <Link href="/contact">
-                <Button variant="Secondary" size="small" className="w-full">
-                  Contact Sales
-                </Button>
+          <div className="w-full max-w-mobile mx-auto px-[1.5rem]">
+            <div className="flex items-center justify-between gap-4 mb-5">
+              <Link
+                href="/"
+                className="cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              >
+                <Image
+                  src="/logo/Logo.svg"
+                  alt="Logo"
+                  width={92}
+                  height={24}
+                  className="w-[77.33px] h-5 md:w-[5.75rem] md:h-6"
+                />
               </Link>
-              <Link href={"/start"}>
-                <Button variant="primary" size="small" className="w-full">
-                  Start for Free
-                </Button>
-              </Link>
+
+              <button onClick={() => setIsOpen(false)} aria-label="Close Menu">
+                <X size={24} />
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-5 justify-center items-center">
+              <ul
+                className="flex flex-col gap-[1rem] text-center"
+                ref={menuItemsRef}
+              >
+                <li>
+                  <Link href="/about" onClick={() => setIsOpen(false)}>
+                    <p className="text-[12px] leading-[160%] text-grayscale-950 py-[0.5rem]">About</p>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing" onClick={() => setIsOpen(false)}>
+                    <p className="text-[12px] leading-[160%] text-grayscale-950 py-[0.5rem]">Pricing</p>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" onClick={() => setIsOpen(false)}>
+                    <p className="text-[12px] leading-[160%] text-grayscale-950 py-[0.5rem]">Blog</p>
+                  </Link>
+                </li>
+              </ul>
+              <div className="flex flex-col gap-3 w-full" ref={buttonsRef}>
+                <Link href="/contact">
+                  <Button variant="Secondary" size="small" className="w-full">
+                    Contact Sales
+                  </Button>
+                </Link>
+                <Link href={"/start"}>
+                  <Button variant="primary" size="small" className="w-full">
+                    Start for Free
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      )}
+      </>
+    )}
     </nav>
   );
 }
