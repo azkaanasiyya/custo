@@ -20,15 +20,14 @@ export default function Features1() {
               width={500}
               height={300}
             />
-            <div className="flex flex-row gap-[1.5rem] items-center">
-              <div className="hidden md:block p-[0.75rem] rounded-full h-[3rem] bg-radial-[at_50%_100%] from-[#6D7A97] to-grayscale-950 to-50%">
-                <Image
-                  src="/icon/AlignLeft-Bulk.svg"
+            <div className="flex flex-row gap-[1.5rem] items-start md:items-center">
+              <Image
+                  src="/icon/task.png"
                   alt=""
-                  width={24}
-                  height={24}
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12"
                 />
-              </div>
               <div className="flex flex-col gap-[0.5rem]">
                 <h4 className="font-sans font-semibold text-[1.25rem] lg:text-[1.5rem] leading-[140%] text-gray-950">
                   Task Automation
@@ -48,14 +47,13 @@ export default function Features1() {
               height={300}
             />
             <div className="flex flex-row gap-[1.5rem] items-start md:items-center">
-              <div className="p-[0.75rem] rounded-full h-[3rem] bg-radial-[at_50%_100%] from-[#6D7A97] to-grayscale-950 to-50%">
-                <Image
-                  src="/icon/CalendarBlank-Bulk.svg"
+              <Image
+                  src="/icon/meeting.png"
                   alt=""
-                  width={24}
-                  height={24}
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12"
                 />
-              </div>
               <div className="flex flex-col gap-[0.5rem]">
                 <h4 className="font-sans font-semibold  text-[1.25rem] lg:text-[1.5rem] leading-[140%] text-gray-950">
                   Meeting Organizer
