@@ -6,12 +6,12 @@ import FadeInSection from "../animation/fadeIn";
 export default function AboutHero() {
   return (
     <div className="p-2">
-      <div className="hero-section pt-[7.5rem] pb-20 px-6 rounded-[12px] md:pt-[9.5rem] md:pb-[6rem] md:px-[3.5rem] flex flex-col bg-grayscale-50 items-center">
+      <div className="hero-section pt-[7.5rem] pb-20 px-6 rounded-[12px] md:pt-[9.5rem] md:pb-[6rem] md:px-10 flex flex-col bg-grayscale-50 items-center">
         <div className="container w-full mx-auto max-w-[67rem] flex flex-col gap-16 items-center justify-center">
 
           <FadeInSection delay={0.3} className="w-full" variant="bottom-to-top">
             <div className="header flex flex-col gap-4 items-center">
-              <h1 className="text-[32px] leading-[120%] font-semibold md:text-[56px] md:leading-[120%]">
+              <h1 className="text-[32px] leading-[120%] font-semibold md:text-[48px]">
                 About Custo
               </h1>
               <p className="text-[16px] leading-[160%] max-w-[41rem] text-center text-grayscale-600 md:text-xlarge">

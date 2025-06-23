@@ -10,7 +10,7 @@ export default function About() {
 
           <FadeInSection delay={0.3} className="w-full" variant="bottom-to-top">
               <div className="header flex flex-col gap-4 lg:flex-row justify-between lg:items-end">
-              <div className="typography md:w-80 lg:w-[27.1875rem]">
+              <div className="typography lg:w-[27.1875rem]">
                 <h3 className="text-[28px] md:text-[36px] leading-[140%] font-semibold lg:text-[40px]">
                   Guided by Purpose and Principles
                 </h3>
