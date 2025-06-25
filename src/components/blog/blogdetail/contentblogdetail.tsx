@@ -36,8 +36,8 @@ export default function ContentBlogDetail() {
   }
 
   return (
-    <div className="flex w-full justify-center">
-      <div className="flex flex-col gap-[2rem] w-full max-w-[67rem]">
+    <div className="flex w-full px-[64px] justify-center">
+      <div className="flex flex-col gap-[2rem] w-full max-w-[890px]">
         <PortableText value={blogPost.body} components={components} />
       </div>
     </div>

@@ -22,12 +22,12 @@ export default function BlogList({ limit, data }: BlogListProps) {
           <FadeInSection key={index} delay={index * 0.1} stagger={0.1}>
             <Link key={index} href={`/blog/${blog.slug}`} passHref>
               <div className="flex flex-col gap-[1.5rem] cursor-pointer hover:opacity-90">
-                <div className="relative w-[344px] h-[280px]">
+                <div className="relative w-full max-w-[344px] h-[260px] sm:h-[240px] md:h-[280px]">
                   <Image
                     src={blog.mainImage?.asset?.url || "/placeholder-image.jpg"}
                     alt={blog.title}
                     fill
-                    className="object-cover"
+                    className="object-cover rounded-[20px]"
                     sizes="(max-width: 768px) 100vw, 344px"
                   />
                 </div>
