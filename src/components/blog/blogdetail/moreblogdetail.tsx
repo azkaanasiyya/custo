@@ -39,8 +39,8 @@ export default function MoreBlogDetail() {
   }
 
   return (
-    <div className="flex w-full justify-center">
-      <div className="flex flex-col gap-[2.5rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop py-[6.5rem]">
+    <div className="flex w-full px-6 md:px-12 lg:px-16 justify-center">
+      <div className="flex flex-col gap-[2.5rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop py-12 md:py-20 lg:py-[6.5rem]">
         <div className="flex flex-row justify-between items-center">
           <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
             More Insights & Tips
@@ -52,11 +52,6 @@ export default function MoreBlogDetail() {
           </Link>
         </div>
         <BlogList data={nextPosts} />
-        <Link href={"/blog"} className="block md:hidden">
-          <Button variant={"Secondary"} size={"small"} className="w-full">
-            Explore More
-          </Button>
-        </Link>
         <Link href={"/blog"} className="block md:hidden">
           <Button variant={"Secondary"} size={"small"} className="w-full">
             Explore More

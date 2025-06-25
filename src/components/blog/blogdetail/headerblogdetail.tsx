@@ -17,11 +17,11 @@ export default function HeaderBlogDetail({ slug }: HeaderBlogDetailProps) {
   }
 
   return (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full items-center justify-center">
       <div>
         <SlideFadeIn
           delay={0}
-          className="flex flex-col gap-[2rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop pt-[9rem]"
+          className="flex flex-col gap-[2rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop lg:px-16 pt-[120px] md:pt-[9rem]"
         >
           <Link href="/blog">
             <div className="flex flex-row gap-[0.5rem] items-center cursor-pointer">
