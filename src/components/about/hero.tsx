@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import FadeInSection from "../animation/fadeIn";
+import Marquee from "../animation/marquee";
 
 export default function AboutHero() {
   return (
@@ -42,7 +43,7 @@ export default function AboutHero() {
               <p className="text-[16px] leading-[160%] max-w-[41rem] text-center text-grayscale-600 md:text-xlarge">
                 Trusted by companies around the world
               </p>
-              <div className="flex flex-row gap-[4rem] opacity-40">
+              <Marquee duration={25}>
                 {Array.from({ length: 6 }).map((_, i) => (
                   <Image
                     key={i}
@@ -53,7 +54,7 @@ export default function AboutHero() {
                     className="w-[141px] h-[28px]"
                   />
                 ))}
-              </div>
+              </Marquee>
             </div>
           </FadeInSection>
 
