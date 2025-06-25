@@ -19,7 +19,7 @@ const components: PortableTextComponents = {
       <h3 className="text-2xl font-semibold text-grayscale-800">{children}</h3>
     ),
     normal: ({ children }) => (
-      <p className="text-[16px] md:text-[18px] text-grayscale-600 leading-[160%]">{children}</p>
+      <p className="text-[16px] md:text-[18px] text-grayscale-600">{children}</p>
     ),
   },
 };
@@ -36,10 +36,12 @@ export default function ContentBlogDetail() {
   }
 
   return (
-    <div className="flex w-full px-6 md:px-12 lg:px-[64px] justify-center">
-      <div className="flex flex-col gap-6 lg:gap-[2rem] w-full lg:max-w-[890px]">
+    <div className="flex w-full px-6 md:px-12 lg:px-[64px] justify-center pb-12 md:pb-20">
+      <div className="flex flex-col w-full gap-8 lg:max-w-[890px]">
         <PortableText value={blogPost.body} components={components} />
       </div>
     </div>
   );
 }
+
+// gap-6 lg:gap-[2rem]
