@@ -13,13 +13,13 @@ const components: PortableTextComponents = {
       <h1 className="text-4xl font-bold text-grayscale-950">{children}</h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-3xl font-semibold text-grayscale-900">{children}</h2>
+      <h2 className="text-[20px] lg:text-[24px] font-semibold leading-[140%] text-grayscale-950">{children}</h2>
     ),
     h3: ({ children }) => (
       <h3 className="text-2xl font-semibold text-grayscale-800">{children}</h3>
     ),
     normal: ({ children }) => (
-      <p className="text-base text-grayscale-700 leading-7">{children}</p>
+      <p className="text-[16px] md:text-[18px] text-grayscale-600 leading-[160%]">{children}</p>
     ),
   },
 };
@@ -36,8 +36,8 @@ export default function ContentBlogDetail() {
   }
 
   return (
-    <div className="flex w-full px-[64px] justify-center">
-      <div className="flex flex-col gap-[2rem] w-full max-w-[890px]">
+    <div className="flex w-full px-6 md:px-12 lg:px-[64px] justify-center">
+      <div className="flex flex-col gap-6 lg:gap-[2rem] w-full lg:max-w-[890px]">
         <PortableText value={blogPost.body} components={components} />
       </div>
     </div>
