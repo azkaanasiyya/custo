@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <div className="px-2 pb-2">
-            <div className="footer relative bg-[url('/background/bg-footer.svg')] bg-cover rounded-[12px] bg-center px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
+            <div className="footer relative bg-[url('/background/bg-footer.svg')] bg-cover rounded-[12px] overflow-hidden bg-center px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
                 <Image
                     src="/background/logo-footer.svg"
                     alt="footer"
                     width={561}
                     height={561}
-                    className="absolute left-0 bottom-0 opacity-[6%] pointer-events-none select-none"
+                    className="absolute object-cover overflow-visible min-h-[561px] md:min-h-0 -right-90 -bottom-50 md:left-0 md:top-5 pointer-events-none select-none"
                 />
                 <div className="container max-w-[67rem] flex flex-col">
                     <div className="top py-10 lg:py-16 flex flex-col gap-10 md:gap-0 md:flex-row justify-between">
