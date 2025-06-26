@@ -8,11 +8,11 @@ import Link from "next/link";
 import FadeInSection from "../animation/fadeIn";
 
 export default function AboutBlog() {
-  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
-  const isTablet = useMediaQuery({ query: "(min-width: 641px) and (max-width: 1024px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1023px)" });
+  const isTablet = useMediaQuery({ query: "(min-width: 641px) and (max-width: 1023px)" });
 
-  let limit = 3;
-  if (isMobile) limit = 1;
+  let limit = 2;
+  if (isDesktop) limit = 3;
   else if (isTablet) limit = 2;
 
   return (
