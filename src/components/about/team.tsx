@@ -21,7 +21,7 @@ export default function AboutTeam() {
                 >
                   <Image
                     src={member.image}
-                    className="w-full"
+                    className="w-[153.5px] h-[131.84px] md:w-[326px] lg:w-[253px] md:h-[280px] object-cover md:rounded-[20px] rounded-[12px]"
                     alt={member.name}
                     width={253}
                     height={280}
