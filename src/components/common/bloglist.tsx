@@ -1,28 +1,37 @@
 "use client";
 
 import useBlog, { blogProps } from "@/lib/hooks/useBlog";
+import useMediaQuery from "@/lib/hooks/useMediaQuery";
 import Image from "next/image";
 import Link from "next/link";
 import FadeInSection from "../animation/fadeIn";
 
 interface BlogListProps {
-  limit?: number;
   data?: blogProps[];
 }
 
-export default function BlogList({ limit, data }: BlogListProps) {
+export default function BlogList({ data }: BlogListProps) {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1023px)");
+
   const { blog } = useBlog();
-  const postToDisplay = data ? data : limit ? blog.slice(0, limit) : blog;
+  const allData = data || blog;
+
+  let limit = 2;
+  if (isDesktop) limit = 3;
+  else if (isTablet) limit = 2;
+
+  const postToDisplay = allData.slice(0, limit);
 
   return (
-    <div className="blog grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
       {postToDisplay
         .filter((blog) => blog && blog.slug)
         .map((blog, index) => (
           <FadeInSection key={index} delay={index * 0.1} stagger={0.1}>
             <Link key={index} href={`/blog/${blog.slug}`} passHref>
               <div className="flex flex-col gap-[1.5rem] cursor-pointer hover:opacity-90">
-                <div className="relative w-full max-w-[344px] h-[260px] sm:h-[240px] md:h-[280px]">
+                <div className="relative w-full h-[240px] sm:h-[240px] md:h-[280px]">
                   <Image
                     src={blog.mainImage?.asset?.url || "/placeholder-image.jpg"}
                     alt={blog.title}
