@@ -36,7 +36,7 @@ export default function Navbar() {
         isOpen ? "bg-white" : "bg-transparent"
       } `}
     >
-      <div className="w-full max-w-mobile md:max-w-tablet lg:max-w-desktop mx-auto p-[1.5rem]">
+      <div className="w-full max-w-mobile md:max-w-tablet lg:max-w-desktop mx-auto py-[1.5rem]">
         <div className="flex items-center justify-between gap-4">
           <Link
             href="/"
@@ -103,7 +103,7 @@ export default function Navbar() {
           ref={containerRef}
           style={{ display: "none" }}
         >
-          <div className="w-full max-w-mobile mx-auto px-[1.5rem]">
+          <div className="w-full max-w-mobile mx-auto">
             <div className="flex items-center justify-between gap-4 mb-5">
               <Link
                 href="/"
@@ -146,14 +146,14 @@ export default function Navbar() {
                 </li>
               </ul>
               <div className="flex flex-col gap-3 w-full" ref={buttonsRef}>
-                <Link href="/contact">
-                  <Button variant="Secondary" size="small" className="w-full">
-                    Contact Sales
-                  </Button>
-                </Link>
                 <Link href={"/start"}>
                   <Button variant="primary" size="small" className="w-full">
                     Start for Free
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="Secondary" size="small" className="w-full">
+                    Contact Sales
                   </Button>
                 </Link>
               </div>
