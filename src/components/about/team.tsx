@@ -12,7 +12,7 @@ export default function AboutTeam() {
               description="Together, we turn bold ideas into powerful tools for modern businesses."
             /> 
             
-          <FadeInSection delay={0.5} className="team grid grid-cols-2 lg:grid-cols-4 w-full gap-[1.25rem]">
+          <FadeInSection delay={0.5} className="team grid grid-cols-2 lg:grid-cols-4 w-full gap-x-[1.25rem] gap-y-10">
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
