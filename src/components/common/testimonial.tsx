@@ -67,7 +67,7 @@ export default function Testimonial() {
               spaceBetween={0}
               initialSlide={1}
               breakpoints={{
-                768: { slidesPerView: 1 },
+                768: { slidesPerView: 1.05 },
                 1024: { slidesPerView: 1.2 }
               }}
               centeredSlides={true}
@@ -91,7 +91,7 @@ export default function Testimonial() {
               {testimonials.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div
-                    className={`transition-transform duration-500 ease-in-out p-4 ${
+                    className={`transition-transform duration-500 ease-in-out p-3 ${
                       index === activeIndex ? "scale-110 z-10" : "scale-90 opacity-70"
                     }`}
                   >
@@ -115,7 +115,7 @@ export default function Testimonial() {
                             width={116}
                             height={20}
                           />
-                          <p className="text-medium md:text-large text-grayscale-600">
+                          <p className="text-medium md:text-large tracking-tight text-grayscale-600">
                             “{item.quote}”
                           </p>
                           <div className="flex flex-col gap-0.5">
@@ -134,16 +134,16 @@ export default function Testimonial() {
               ))}
             </Swiper>
 
-            <div className="flex lg:hidden justify-center gap-4 mt-6">
+            <div className="flex lg:hidden justify-center gap-5 mt-6">
               <button
                 ref={prevRefMobile}
-                className="bg-white border cursor-pointer border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition flex items-center justify-center"
+                className="bg-white border cursor-pointer border-grayscale-200 rounded-full w-10 h-10 hover:bg-grayscale-200 transition flex items-center justify-center"
               >
                 <i className="ri-arrow-left-line text-black text-l-regular"></i>
               </button>
               <button
                 ref={nextRefMobile}
-                className="bg-white border cursor-pointer border-grayscale-200 rounded-full w-8 h-8 hover:bg-grayscale-200 transition flex items-center justify-center"
+                className="bg-white border cursor-pointer border-grayscale-200 rounded-full w-10 h-10 hover:bg-grayscale-200 transition flex items-center justify-center"
               >
                 <i className="ri-arrow-right-line text-black text-l-regular"></i>
               </button>
