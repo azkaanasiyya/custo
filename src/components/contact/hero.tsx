@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import FadeInSection from "../animation/fadeIn"
+import Image from "next/image";
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -43,7 +44,17 @@ export default function ContactHero() {
 
   return (
     <div className="p-2">
-      <div className="hero-section bg-[url('/background/bg-pricing.png')] bg-cover bg-center rounded-[12px] pt-40 pb-12 md:pb-20 lg:pb-[6.5rem] px-4 md:px-12 lg:px-16 flex flex-col justify-center items-center">
+      <div 
+        className="hero-section relative bg-[url('/bg-gradients/Background.png')] overflow-hidden bg-center bg-no-repeat rounded-[12px] pt-40 pb-12 md:pb-20 lg:pb-[6.5rem] px-4 md:px-12 lg:px-16 flex flex-col justify-center items-center"
+        style={{ backgroundSize: '100% 100%' }}
+      >
+        <Image
+          src="/background/logo-pricing.png"
+          alt="pricing"
+          width={1184}
+          height={1060}
+          className="absolute object-contain overflow-visible w-[1184px] max-w-none top-0 pointer-events-none select-none"
+        />
           <div className="container max-w-[672px] lg:max-w-[67rem] flex flex-col justify-center items-center gap-10">
             <FadeInSection delay={0.3} className="header flex flex-col gap-4 justify-center items-center" data-animate="header">
               <div className="text-[32px] md:text-[48px] lg:text-[56px] leading-[120%] font-semibold text-grayscale-950 text-center">
