@@ -36,7 +36,7 @@ export default function Navbar() {
         isOpen ? "bg-white" : "bg-transparent"
       } `}
     >
-      <div className="w-full max-w-mobile md:max-w-tablet lg:max-w-desktop mx-auto py-[1.5rem]">
+      <div className="w-full max-w-mobile md:max-w-tablet lg:max-w-desktop mx-auto px-0 md:px-6 py-[1.5rem]">
         <div className="flex items-center justify-between gap-4">
           <Link
             href="/"
