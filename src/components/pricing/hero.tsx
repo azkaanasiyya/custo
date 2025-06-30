@@ -49,19 +49,28 @@ export default function PricingHero() {
               </p>
             </div>
           </FadeInSection>
-
+          
           <FadeInSection delay={0.1} variant="bottom-to-top">
-            <div className="flex justify-center">
-              <div className="relative flex items-center bg-[#DDF5E6] rounded-full p-1 w-[280px] h-[48px]">
+            <div className="cursor-pointer flex justify-center">
+              <div 
+                  className="relative cursor-pointer flex items-center bg-[#DDF5E6]/40 rounded-full p-1 w-[280px] h-[48px] border-white/40 backdrop-blur-md"
+                  style={{
+                    borderImage: 'linear-gradient(90deg, #FFFFFFA3 0%, #9DE2CD 64%, #9DE2CD 94.8%, #FFFFFFCC 100%) 1',
+                    boxShadow: `
+                      0px 2px 8px rgba(0, 0, 0, 0.06), 
+                      inset 0px -1px 18px rgba(255, 255, 255, 0.4)
+                    `,
+                  }}
+              >
                 <div
-                  className={`absolute top-1 left-1 h-[40px] w-[132px] rounded-full bg-white shadow transition-all duration-300 ${
+                  className={`absolute top-1 left-1 h-[40px] w-[132px] cursor-pointer rounded-full bg-white shadow transition-all duration-300 ${
                     isAnnually ? "translate-x-[136px]" : "translate-x-0"
                   }`}
                 ></div>
                 <button
                   aria-label="Monthly"
                   onClick={() => setIsAnnually(false)}
-                  className={`z-10 w-[132px] h-[40px] text-small md:text-medium font-medium rounded-full transition-colors ${
+                  className={`z-10 w-[132px] h-[40px] text-sm cursor-pointer font-medium rounded-full transition-colors ${
                     !isAnnually ? "text-grayscale-900" : "text-gray-500"
                   }`}
                 >
@@ -70,7 +79,7 @@ export default function PricingHero() {
                 <button
                   aria-label="Annually"
                   onClick={() => setIsAnnually(true)}
-                  className={`z-10 w-[132px] h-[40px] text-small md:text-medium font-medium rounded-full transition-colors ${
+                  className={`z-10 w-[132px] h-[40px] text-sm font-medium cursor-pointer rounded-full transition-colors ${
                     isAnnually ? "text-grayscale-900" : "text-gray-500"
                   }`}
                 >
