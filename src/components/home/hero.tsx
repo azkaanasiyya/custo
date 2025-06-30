@@ -30,7 +30,8 @@ export default function HomeHero() {
                   className="inline-flex items-center gap-2 h-7 rounded-full px-4"
                   style={{
                     backgroundColor: "#FFFFFF3D",
-                    boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.06)"
+                    boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.06),
+                                inset 0px -1px 18px rgba(255, 255, 255, 0.4)`,
                   }}
                 >
                   <span className="text-s-medium text-gray-950">
