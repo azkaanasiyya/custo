@@ -8,8 +8,18 @@ import FadeInSection from "../animation/fadeIn";
 export default function HomeHero() {
   return (
     <div className="px-[0.5rem] pt-[0.5rem]">
-      <div className="relative bg-[url(/bg-gradients/Background.png)] bg-cover bg-top flex justify-center rounded-[0.75rem]">
-        <div className="flex flex-col gap-[3rem] w-full pt-[9.5rem] overflow-hidden">
+      <div
+        className="relative bg-[url(/bg-gradients/Background.png)] overflow-hidden bg-center bg-no-repeat flex justify-center items-center rounded-[0.75rem]"
+        style={{ backgroundSize: '100% 100%' }}
+      >
+        <Image
+            src="/bg-gradients/logo-home.png"
+            alt="hero"
+            width={1184}
+            height={1060}
+            className="absolute object-contain overflow-visible w-[1184px] max-w-none top-0 pointer-events-none select-none"
+        /> 
+        <div className="flex flex-col gap-[3rem] w-full pt-[112px] md:pt-[9.5rem] overflow-hidden">
           <div className="flex flex-col gap-[3rem] mx-auto max-w-mobile md:max-w-tablet lg:max-w-desktop items-stretch">
             <FadeInSection
               stagger={0.3}
