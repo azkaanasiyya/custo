@@ -7,7 +7,14 @@ export default function AboutQuote() {
   return (
     <div className="p-2">
       <div className="w-full">
-        <div className="quote-section bg-[url('/background/bg-about.svg')] bg-cover bg-center bg-no-repeat rounded-[12px] lg:max-h-[38rem] py-12 px-4 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-4 flex flex-col justify-center items-center">
+        <div className="quote-section relative bg-[url('/background/bg-about.png')] overflow-hidden bg-cover bg-center bg-no-repeat rounded-[12px] lg:max-h-[38rem] py-12 px-4 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-4 flex flex-col justify-center items-center">
+          <Image
+            src="/background/logo-about.png"
+            alt="about"
+            width={1184}
+            height={592}
+            className="absolute object-contain overflow-visible w-[1184px] max-w-none right-0 bottom-0 pointer-events-none select-none"
+          />
           <div className="container max-w-[67rem] w-full mx-auto flex flex-col lg:flex-row gap-14 lg:justify-between lg:items-center">
 
             <FadeInSection stagger={0.3} className="w-full lg:w-auto">
