@@ -21,7 +21,7 @@ export default function BlogList({ limit, data }: BlogListProps) {
         .filter((blog) => blog && blog.slug)
         .map((blog, index) => (
           <FadeInSection key={index} delay={index * 0.1} stagger={0.1}>
-            <Link key={index} href={'/blog/${blog.slug}'} passHref>
+            <Link key={index} href={`/blog/${blog.slug}`} passHref>
               <div className="flex flex-col gap-[1.5rem] cursor-pointer hover:opacity-90">
                 <div className="relative w-full max-w-[344px] h-[260px] sm:h-[240px] md:h-[280px]">
                   <Image
