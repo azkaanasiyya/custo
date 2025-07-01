@@ -42,6 +42,20 @@ const components: PortableTextComponents = {
       <p className="text-[16px] md:text-[18px] text-grayscale-600">{children}</p>
     ),
   },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="list-disc list-inside space-y-2 text-grayscale-600">
+        {children}
+      </ul>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => (
+    <li className="text-[16px] md:text-[18px] leading-[160%] text-grayscale-600">
+      {children}
+    </li>
+  ),
+  }
 };
 
 export default function ContentBlogDetail() {
