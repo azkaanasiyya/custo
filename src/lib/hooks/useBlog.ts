@@ -63,7 +63,13 @@ export default function useBlog() {
             },
             alt
           },
-          body
+          body[]{
+            ...,
+            asset -> {
+            _id,
+            url
+            }
+          }
         }`
       )
       .then((data: blogProps[]) => {

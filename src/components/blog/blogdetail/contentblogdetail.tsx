@@ -3,10 +3,30 @@
 import { useParams } from "next/navigation";
 import useBlog from "@/lib/hooks/useBlog";
 import { PortableText, PortableTextComponents } from "@portabletext/react";
+import Image from "next/image";
 
 const components: PortableTextComponents = {
   types: {
-    // Tambahkan jika ada custom type (seperti image, code, dsb)
+    image: ({ value }) => {
+      const imageUrl = value?.asset?.url;
+
+      if (!imageUrl) {
+        console.warn("Image not found:", value);
+        return null;
+      }
+        
+      return (
+        <div className="my-0">
+          <Image
+            src={imageUrl}
+            alt={value.alt || "Blog Image"}
+            width={800}
+            height={500}
+            className="rounded-lg w-full h-auto object-cover"
+          />
+        </div>
+      );
+    },
   },
   block: {
     h1: ({ children }) => (
