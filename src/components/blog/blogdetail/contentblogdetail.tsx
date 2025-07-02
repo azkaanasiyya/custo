@@ -44,7 +44,7 @@ const components: PortableTextComponents = {
   },
   list: {
     bullet: ({ children }) => (
-      <ul className="list-disc list-inside space-y-2 text-grayscale-600">
+      <ul className="list-disc list-inside text-grayscale-600">
         {children}
       </ul>
     ),
