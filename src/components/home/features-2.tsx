@@ -3,241 +3,150 @@ import FadeInSection from "../animation/fadeIn";
 
 export default function Features2() {
   return (
-    <div className="flex justify-center py-12 px-6 md:py-20 md:px-12 lg:px-16 lg:py-[6.5rem]">
-      <div className="flex flex-col gap-[4rem] md:gap-[5rem] w-full max-w-mobile md:max-w-tablet lg:max-w-desktop">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]">
-          <div className="relative overflow-hidden">
-            <FadeInSection delay={0.2}>
-              <div className="relative overflow-hidden">
-                <Image
-                  src="/features/Background.png"
-                  alt=""
-                  width={454}
-                  height={440}
-                  className="hidden lg:block rounded-[1.25rem]"
-                />
-              </div>
-              <div className="absolute top-1/2 left-55 -translate-x-1/2 -translate-y-1/2">
-                <Image
-                  src="/features/img-1/Component-1.png"
-                  alt=""
-                  width={240}
-                  height={282}
-                  className="hidden lg:block "
-                />
-              </div>
-              <div className="absolute top-1/2 -translate-y-1/2 -left-20">
-                <Image
+    <div className="features-2 py-12 md:py-20 lg:py-[104px] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
+      <div className="container max-w-[1072px] flex flex-col gap-16 md:gap-20 justify-center items-center">
+        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
+          <FadeInSection className="relative overflow-hidden lg:w-1/2">
+            <Image
+              src="/features/Background.png"
+              alt=""
+              width={454}
+              height={440}
+              unoptimized
+              className="overflow-hidden w-full h-full"
+            />
+            <FadeInSection className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-row gap-4 justify-center items-center">
+              <Image
                   src="/features/img-1/Component-2.png"
                   alt=""
                   width={168}
                   height={122}
-                  className="hidden lg:block "
+                  unoptimized
+                  className="w-[112px] h-[81px] md:w-[230px] md:h-[167px] lg:w-[168px] lg:h-[122px]"
                 />
-              </div>
-              <div className="absolute top-1/2 -translate-y-1/2 -right-0">
-                <Image
+              <Image
+                  src="/features/img-1/Component-1.png"
+                  alt=""
+                  width={240}
+                  height={282}
+                  unoptimized
+                  className="w-[160px] h-[189px] md:w-[329px] md:h-[389px] lg:w-[240px] lg:h-[282px]"
+                />
+              <Image
                   src="/features/img-1/Component-3.png"
                   alt=""
                   width={168}
                   height={122}
-                  className="hidden lg:block "
+                  unoptimized
+                  className="w-[112px] h-[81px] md:w-[230px] md:h-[167px] lg:w-[168px] lg:h-[122px]"
                 />
-              </div>
             </FadeInSection>
-          </div>
+          </FadeInSection>
 
-          <div className="flex flex-col gap-[1rem]">
-            <p className="text-xl-medium text-[1rem] md:text-[1.125rem] text-primary-500">
-              Analytics & Reporting
-            </p>
-            <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
-              Understand Your Business Like Never Before
-            </h2>
-            <p className="text-[16px] leading-[160%] md:text-xl-regular text-grayscale-600">
-              Get real-time insights into sales performance, customer behavior,
-              and business growth.
-            </p>
-          </div>
-
-          <div className="w-full h-[317px] md:h-[667px] relative lg:hidden block">
-            <Image
-              src="/features/Background.png"
-              alt=""
-              fill
-              className="object-cover rounded-[1.25rem]"
-            />
-            <Image
-              src="/features/img-1/Component-2.png"
-              alt=""
-              width={168}
-              height={122}
-              className="absolute top-1/2 left-2 -translate-y-1/2"
-            />
-            <Image
-              src="/features/img-1/Component-1.png"
-              alt=""
-              width={240}
-              height={282}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            />
-            <Image
-              src="/features/img-1/Component-3.png"
-              alt=""
-              width={168}
-              height={122}
-              className="absolute top-1/2 right-2 -translate-y-1/2"
-            />
-          </div>
+          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-1/2">
+            <p className="text-[16px] md:text-[18px] leading-[160%] font-medium text-primary-500">Analytics & Reporting</p>
+            <p className="text-[28px] md:text-[36px] lg:text-[40px] leading-[140%] tracking-tight font-semibold text-grayscale-950">Understand Your Business Like Never Before</p>
+            <p className="text-[16px] md:text-[18px] leading-[160%] text-grayscale-600">Get real-time insights into sales performance, customer behavior, and business growth.</p>
+          </FadeInSection>
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]">
-          <div className="relative overflow-hidden">
-            <FadeInSection className="relative rounded-[1.25rem]">
-              <Image
-                src="/features/Background.png"
-                alt=""
-                width={454}
-                height={440}
-                className="hidden lg:block rounded-[1.25rem]"
-              />
-            </FadeInSection>
-            <FadeInSection className="absolute top-9 translate-y-1/2 left-25">
-              <Image
-                src="/features/img-2/Component-4.png"
-                alt=""
-                width={240}
-                height={60}
-                className="hidden lg:block"
-              />
-            </FadeInSection>
-            <FadeInSection className="absolute top-5 translate-y-1/2 translate-x-1/2 -left-6">
-              <Image
-                src="/features/img-2/Component-5.png"
-                alt=""
-                width={240}
-                height={232}
-                className="hidden lg:block "
-              />
-            </FadeInSection>
-            <FadeInSection delay={0.2} className="absolute top-16 translate-y-1/2 translate-x-1/2 left-65">
-              <Image
-                src="/features/img-2/Cursor-1.png"
-                alt=""
-                width={90}
-                height={56}
-                className="hidden lg:block "
-              />
-            </FadeInSection>
-            <FadeInSection className="absolute top-65 translate-y-1/2 translate-x-1/2 left-40">
-              <Image
-                src="/features/img-2/Cursor-2.png"
-                alt=""
-                width={84}
-                height={56}
-                className="hidden lg:block "
-              />
-            </FadeInSection>
-          </div>
-          <div className="flex flex-col gap-[1rem]">
-            <p className="text-xl-medium text-[1rem] md:text-[1.125rem] text-primary-500">
-              Multi-User Collaboration
-            </p>
-            <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
-              Empower Your Team with Real-Time Sync
-            </h2>
-            <p className="text-[16px] leading-[160%] md:text-xl-regular text-grayscale-600">
-              Collaborate effortlessly with your team by sharing information,
-              notes, and real-time updates
-            </p>
-          </div>
-          <div className="w-full h-[317px] md:h-[667px] relative lg:hidden block overflow-hidden">
+        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
+          <FadeInSection className="relative overflow-hidden lg:w-1/2">
             <Image
               src="/features/Background.png"
-              alt=""
-              fill
-              className="object-cover rounded-[1.25rem]"
-            />
-            <Image
-              src="/features/img-2/Component-5.png"
-              alt=""
-              width={240}
-              height={232}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2"
-            />
-            <Image
-              src="/features/img-2/Component-4.png"
-              alt=""
-              width={240}
-              height={60}
-              className="absolute top-1/2 -translate-x-1/2 left-1/2"
-            />
-            <Image
-              src="/features/img-2/Cursor-1.png"
-              alt=""
-              width={90}
-              height={56}
-              className="absolute top-16 right-12"
-            />
-            <Image
-              src="/features/img-2/Cursor-2.png"
-              alt=""
-              width={84}
-              height={56}
-              className="absolute bottom-65 left-12"
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1.25rem]">
-          <div className="relative overflow-hidden">
-            <FadeInSection className="relative rounded-[1.25rem]">
-              <Image
-                src="/features/Background.png"
-                alt=""
-                width={454}
-                height={440}
-                className="hidden lg:block rounded-[1.25rem]"
-              />
-            </FadeInSection>
-            <FadeInSection className="absolute top-1/2 -translate-y-1/2">
-              <Image
-                src="/features/img-3/Component-6.png"
-                alt=""
-                width={454}
-                height={440}
-                className="hidden lg:block"
-              />
-            </FadeInSection>
-          </div>
-          <div className="flex flex-col gap-[1rem]">
-            <p className="text-xl-medium text-[1rem] md:text-[1.125rem] text-primary-500">
-              Email Integration
-            </p>
-            <h2 className="font-sans font-semibold text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] leading-[140%] text-grayscale-950">
-              Manage Emails Without Leaving Your CRM
-            </h2>
-            <p className="text-[16px] leading-[160%] md:text-xl-regular text-grayscale-600">
-              Sync with your email to send, receive, and track conversations
-              directly from the CRM.
-            </p>
-          </div>
-          <div className="w-full h-[317px] md:h-[667px] relative lg:hidden block">
-            <Image
-              src="/features/Background.png"
-              alt=""
-              fill
-              className="object-cover rounded-[1.25rem]"
-            />
-            <Image
-              src="/features/img-3/Component-6.png"
               alt=""
               width={454}
               height={440}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              unoptimized
+              className="overflow-hidden w-full h-full"
             />
-          </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-4 justify-center items-center">
+              <div className="relative">
+                <FadeInSection delay={0.1}>
+                  <Image
+                    src="/features/img-2/Component-4.png"
+                    alt=""
+                    width={240}
+                    height={60}
+                    unoptimized
+                    className="w-[160px] h-[40px] md:w-[329px] md:h-[82px] lg:w-[240px] lg:h-[60px]"
+                  />
+                  <div className="absolute -right-7 -bottom-3.5 md:-right-11 md:-bottom-3">
+                    <FadeInSection delay={0.2}>
+                      <Image
+                        src="/features/img-2/Cursor-1.png"
+                        alt=""
+                        width={75}
+                        height={40}
+                        unoptimized
+                        className="w-[50px] h-[31px] md:w-[103px] md:h-[62px] lg:w-[75px] lg:h-[40px]"
+                      />
+                    </FadeInSection>
+                  </div>
+                </FadeInSection>
+              </div>
+              <div className="relative">
+                <FadeInSection delay={0.3}>
+                  <Image
+                    src="/features/img-2/Component-5.png"
+                    alt=""
+                    width={240}
+                    height={232}
+                    unoptimized
+                    className="w-[160px] h-[155px] md:w-[329px] md:h-[318px] lg:w-[240px] lg:h-[232px]"
+                  />
+                  <div className="absolute right-7 bottom-6 lg:right-9 lg:bottom-9">
+                    <FadeInSection delay={0.4}>
+                      <Image
+                        src="/features/img-2/Cursor-2.png"
+                        alt=""
+                        width={68}
+                        height={40}
+                        unoptimized
+                        className="w-[45px] h-[30px] md:w-[93px] md:h-[62px] lg:w-[68px] lg:h-[40px]"
+                      />
+                    </FadeInSection>
+                  </div>
+                </FadeInSection>
+              </div>
+            </div>
+          </FadeInSection>
+
+          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-1/2">
+            <p className="text-[16px] md:text-[18px] leading-[160%] font-medium text-primary-500">Multi-User Collaboration</p>
+            <p className="text-[28px] md:text-[36px] lg:text-[40px] leading-[140%] tracking-tighter md:tracking-tight font-semibold text-grayscale-950">Empower Your Team with Real-Time Sync</p>
+            <p className="text-[16px] md:text-[18px] leading-[160%] text-grayscale-600">Collaborate effortlessly with your team by sharing information, notes, and real-time updates.</p>
+          </FadeInSection>
         </div>
+        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
+          <FadeInSection className="relative overflow-hidden lg:w-1/2">
+            <Image
+              src="/features/Background.png"
+              alt=""
+              width={454}
+              height={440}
+              unoptimized
+              className="overflow-hidden w-full h-full"
+            />
+            <div className="absolute top-1/2 -translate-y-1/2 flex flex-row gap-4 justify-center items-center">
+              <FadeInSection delay={0.2}>
+                <Image
+                  src="/features/img-3/Component-6.png"
+                  alt=""
+                  width={688}
+                  height={360}
+                  unoptimized
+                />
+              </FadeInSection>
+            </div>
+          </FadeInSection>
+
+          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-1/2">
+            <p className="text-[16px] md:text-[18px] leading-[160%] font-medium text-primary-500">Email Integration</p>
+            <p className="text-[28px] md:text-[36px] lg:text-[40px] leading-[140%] tracking-tighter font-semibold text-grayscale-950">Manage Emails Without Leaving Your CRM</p>
+            <p className="text-[16px] md:text-[18px] leading-[160%] text-grayscale-600">Sync with your email to send, receive, and track conversations directly from the CRM.</p>
+          </FadeInSection>
+        </div>
+
       </div>
     </div>
   );
