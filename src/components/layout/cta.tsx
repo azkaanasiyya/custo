@@ -9,7 +9,7 @@ export default function CTA() {
     return (
         <div className="p-2">
             <div
-                className="relative bg-[url('/background/bg-cta.png')] overflow-hidden bg-no-repeat bg-center rounded-[12px] py-16 px-6 md:p-16 flex flex-col justify-center items-center"
+                className="relative bg-[url('/background/bg-cta-mobile.png')] md:bg-[url('/background/bg-cta.png')] overflow-hidden bg-no-repeat bg-center rounded-[12px] py-16 px-6 md:p-16 flex flex-col justify-center items-center"
                 style={{ backgroundSize: '100% 100%' }}
             >
                 <Image
@@ -17,7 +17,14 @@ export default function CTA() {
                     alt="cta"
                     width={1424}
                     height={415}
-                    className="absolute max-w-[1424px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain pointer-events-none select-none"
+                    className="absolute max-w-[1424px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain pointer-events-none select-none hidden md:block"
+                />
+                <Image
+                    src="/background/logo-cta-mobile.png"
+                    alt="cta"
+                    width={409}
+                    height={364}
+                    className="absolute max-w-[359px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain pointer-events-none select-none block md:hidden"
                 />
                     <FadeInSection delay={0.5} className="container max-w-[67rem] md:py-10 flex flex-col gap-8 justify-center items-center">
                         <div className="cta-header">
