@@ -96,7 +96,7 @@ export default function Testimonial() {
                     }`}
                   >
                     <div className="flex flex-col md:flex-row gap-4 w-full items-stretch justify-center">
-                      <div className="w-full h-[255px] md:w-1/2">
+                      <div className="w-full md:w-1/2">
                         <div className="relative w-full aspect-[49/51] h-[255px] md:h-full lg:aspect-auto rounded-xl overflow-hidden">
                           <Image
                             src={item.image}
