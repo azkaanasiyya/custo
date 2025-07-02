@@ -134,7 +134,7 @@ export default function Testimonial() {
               ))}
             </Swiper>
 
-            <div className="flex lg:hidden justify-center gap-5 mt-6">
+            <div className="flex lg:hidden justify-center gap-5 mt-[52px] md:mt-6">
               <button
                 ref={prevRefMobile}
                 className="bg-white border cursor-pointer border-grayscale-200 rounded-full w-10 h-10 hover:bg-grayscale-200 transition flex items-center justify-center"
