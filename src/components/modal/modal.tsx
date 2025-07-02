@@ -16,7 +16,6 @@ export function Modal() {
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer"
               size="testimonial"
               >
-                {/* <i className="ri-play-fill text-white text-2xl z-999"></i> */}
                 <Image src="/play.png" alt="play" width={24} height={24} />
             </Button>
         </DialogTrigger>
@@ -26,6 +25,7 @@ export function Modal() {
             muted 
             className="w-[80vw] h-[80vh] aspect-video object-cover rounded-[20px]"
             >
+              <source src="/modal.webm" type="video/webm" />
               <source src="/modal.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

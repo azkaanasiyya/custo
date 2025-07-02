@@ -105,7 +105,7 @@ export default function Testimonial() {
                             className="object-cover"
                             style={{ objectPosition: "center 20%" }}
                           />
-                          <Modal></Modal>
+                          <Modal/>
                         </div>
                       </div>
                       <div className="w-full md:w-1/2 lg:w-full">
