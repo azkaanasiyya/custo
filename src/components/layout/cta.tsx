@@ -19,13 +19,13 @@ export default function CTA() {
                     height={415}
                     className="absolute max-w-[1424px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain pointer-events-none select-none hidden md:block"
                 />
-                <Image
+                {/* <Image
                     src="/background/logo-cta-mobile.png"
                     alt="cta"
                     width={409}
-                    height={364}
+                    height={374}
                     className="absolute max-w-[359px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain pointer-events-none select-none block md:hidden"
-                />
+                /> */}
                     <FadeInSection delay={0.5} className="container max-w-[67rem] md:py-10 flex flex-col gap-8 justify-center items-center">
                         <div className="cta-header">
                             <Header
