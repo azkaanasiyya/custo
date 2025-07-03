@@ -23,7 +23,7 @@ export default function FAQs() {
             <Accordion
               type="single"
               collapsible
-              className="w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-10"
+              className="w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-y-3 lg:gap-x-10"
             >
               {faqs.map((faq, index) => (
                 <FadeInSection delay={0.5} key={index}>
