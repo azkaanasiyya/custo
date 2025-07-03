@@ -45,7 +45,7 @@ export default function ContactHero() {
   return (
     <div className="p-2">
       <div 
-        className="hero-section relative bg-[url('/bg-gradients/Background.png')] overflow-hidden bg-center bg-no-repeat rounded-[12px] pt-40 pb-12 md:pb-20 lg:pb-[6.5rem] px-4 md:px-12 lg:px-16 flex flex-col justify-center items-center"
+        className="hero-section relative bg-[url('/bg-gradients/background-contact.png')] md:bg-[url('/bg-gradients/Background.png')] overflow-hidden bg-center bg-no-repeat rounded-[12px] pt-40 pb-12 md:pb-20 lg:pb-[6.5rem] px-4 md:px-12 lg:px-16 flex flex-col justify-center items-center"
         style={{ backgroundSize: '100% 100%' }}
       >
         <Image
@@ -53,7 +53,7 @@ export default function ContactHero() {
           alt="pricing"
           width={1184}
           height={1060}
-          className="absolute object-contain overflow-visible w-[1184px] max-w-none top-0 pointer-events-none select-none"
+          className="absolute object-contain overflow-visible w-[1184px] max-w-none top-0 pointer-events-none select-none hidden md:block"
         />
           <div className="container max-w-[672px] lg:max-w-[67rem] flex flex-col justify-center items-center gap-10">
             <FadeInSection delay={0.3} className="header flex flex-col gap-4 justify-center items-center" data-animate="header">
