@@ -3,7 +3,7 @@ import BlogList from "../common/bloglist";
 
 export default function BlogContent() {
   return (
-      <div className="flex flex-col w-full justify-center items-center pt-[120px] px-6 md:pt-[160px] pb-12 md:pb-[104px] md:px-12 lg:px-16">
+      <div id="blog" className="flex flex-col w-full justify-center items-center pt-[120px] px-6 md:pt-[160px] pb-12 md:pb-[104px] md:px-12 lg:px-16">
         <div className="flex flex-col gap-[4rem] max-w-mobile md:max-w-tablet lg:max-w-desktop ">
             <FadeInSection>
             <div className="flex flex-col gap-[1rem] items-center">

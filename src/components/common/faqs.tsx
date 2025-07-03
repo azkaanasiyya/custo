@@ -10,7 +10,7 @@ import FadeInSection from "../animation/fadeIn";
 
 export default function FAQs() {
   return (
-    <div className="faqs-section py-12 md:py-20 lg:py-[6.5rem] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
+    <div id="faqs" className="faqs-section py-12 md:py-20 lg:py-[6.5rem] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
       <div className="container max-w-mobile md:max-w-tablet lg:max-w-desktop gap-10 md:gap-16 flex flex-col justify-center items-center">
         <div>
           <Header

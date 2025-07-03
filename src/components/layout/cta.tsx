@@ -4,6 +4,7 @@ import Header from "@/components/common/header";
 import { Button } from "../ui/button";
 import FadeInSection from "../animation/fadeIn";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CTA() {
     return (
@@ -32,9 +33,12 @@ export default function CTA() {
                             />
                         </div>
                         <div className="cta-button w-full md:w-auto">
-                            <Button variant="primary" size="base" className="cursor-pointer w-full md:w-auto">
-                                Start for Free
-                            </Button>
+                            <Link href="/contact">
+                               <Button variant="primary" size="base" className="cursor-pointer w-full md:w-auto">
+                                    Start for Free
+                                </Button> 
+                            </Link>
+                            
                         </div>
                     </FadeInSection>
             </div>

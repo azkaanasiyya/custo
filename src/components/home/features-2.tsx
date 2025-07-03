@@ -3,7 +3,7 @@ import FadeInSection from "../animation/fadeIn";
 
 export default function Features2() {
   return (
-    <div className="features-2 py-12 md:py-20 lg:py-[104px] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
+    <div id="features-2" className=" py-12 md:py-20 lg:py-[104px] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
       <div className="container max-w-[1072px] flex flex-col gap-16 md:gap-20 justify-center items-center">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-[454px_1fr] gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
           <FadeInSection className="relative overflow-hidden lg:w-full lg:max-h-[440px]">

@@ -40,7 +40,7 @@ export default function Testimonial() {
   }, [isDesktop, swiperInstance]);
 
   return (
-    <div className="testimonial-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center overflow-x-hidden">
+    <div id="testimonials" className="testimonial-section py-12 px-6 md:py-20 md:px-12 lg:py-[6.5rem] lg:px-[1rem] flex flex-col justify-center items-center overflow-x-hidden">
         <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-[4rem]">
            <Header
                 title="Real Stories from Real Users"
