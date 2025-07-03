@@ -5,8 +5,8 @@ export default function Features2() {
   return (
     <div className="features-2 py-12 md:py-20 lg:py-[104px] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center">
       <div className="container max-w-[1072px] flex flex-col gap-16 md:gap-20 justify-center items-center">
-        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
-          <FadeInSection className="relative overflow-hidden lg:w-1/2">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-[454px_1fr] gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
+          <FadeInSection className="relative overflow-hidden lg:w-full lg:max-h-[440px]">
             <Image
               src="/features/Background.png"
               alt=""
@@ -43,14 +43,14 @@ export default function Features2() {
             </FadeInSection>
           </FadeInSection>
 
-          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-1/2">
+          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-full">
             <p className="text-[16px] md:text-[18px] leading-[160%] font-medium text-primary-500">Analytics & Reporting</p>
             <p className="text-[28px] md:text-[36px] lg:text-[40px] leading-[140%] tracking-tight font-semibold text-grayscale-950">Understand Your Business Like Never Before</p>
             <p className="text-[16px] md:text-[18px] leading-[160%] text-grayscale-600">Get real-time insights into sales performance, customer behavior, and business growth.</p>
           </FadeInSection>
         </div>
-        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
-          <FadeInSection className="relative overflow-hidden lg:w-1/2">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-[454px_1fr] gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
+          <FadeInSection className="relative overflow-hidden lg:w-full lg:max-h-[440px]">
             <Image
               src="/features/Background.png"
               alt=""
@@ -111,14 +111,14 @@ export default function Features2() {
             </div>
           </FadeInSection>
 
-          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-1/2">
+          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-full">
             <p className="text-[16px] md:text-[18px] leading-[160%] font-medium text-primary-500">Multi-User Collaboration</p>
             <p className="text-[28px] md:text-[36px] lg:text-[40px] leading-[140%] tracking-tighter md:tracking-tight font-semibold text-grayscale-950">Empower Your Team with Real-Time Sync</p>
             <p className="text-[16px] md:text-[18px] leading-[160%] text-grayscale-600">Collaborate effortlessly with your team by sharing information, notes, and real-time updates.</p>
           </FadeInSection>
         </div>
-        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
-          <FadeInSection className="relative overflow-hidden lg:w-1/2">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-[454px_1fr] gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
+          <FadeInSection className="relative overflow-hidden lg:w-full lg:max-h-[440px]">
             <Image
               src="/features/Background.png"
               alt=""
@@ -140,7 +140,7 @@ export default function Features2() {
             </div>
           </FadeInSection>
 
-          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-1/2">
+          <FadeInSection className="flex flex-col gap-4 items-start max-w-[526px] lg:w-full">
             <p className="text-[16px] md:text-[18px] leading-[160%] font-medium text-primary-500">Email Integration</p>
             <p className="text-[28px] md:text-[36px] lg:text-[40px] leading-[140%] tracking-tighter font-semibold text-grayscale-950">Manage Emails Without Leaving Your CRM</p>
             <p className="text-[16px] md:text-[18px] leading-[160%] text-grayscale-600">Sync with your email to send, receive, and track conversations directly from the CRM.</p>
