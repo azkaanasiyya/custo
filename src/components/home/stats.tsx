@@ -15,7 +15,7 @@ export default function HomeStats() {
                 <h4 className="font-sans font-semibold leading-[140%] text-[1.25rem] lg:text-[1.5rem]">
                   {stat.title}
                 </h4>
-                <p className="text-m-regular pb-5 md:pb-10 text-[0.75rem] md:text-[0.875rem] text-grayscale-600 text-center">
+                <p className="text-m-regular md:pb-10 text-[0.75rem] md:text-[0.875rem] text-grayscale-600 text-center">
                   {stat.description}
                 </p>
               </div>
