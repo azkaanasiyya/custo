@@ -28,7 +28,7 @@ export default function PricingHero() {
   return (
     <div className="p-2">
       <div 
-        className="hero-section relative bg-[url('/bg-gradients/Background.png')] overflow-hidden bg-center bg-no-repeat rounded-[0.75rem] pt-[120px] md:pt-40 pb-12 md:pb-[6.5rem] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center"
+        className="hero-section relative bg-[url('/bg-gradients/background-contact.png')] md:bg-[url('/bg-gradients/background-pricing.png')] lg:bg-[url('/bg-gradients/Background.png')] overflow-hidden bg-center bg-no-repeat rounded-[0.75rem] pt-[120px] md:pt-40 pb-12 md:pb-[6.5rem] px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center"
         style={{ backgroundSize: '100% 100%' }}
       >
         <Image
@@ -36,7 +36,7 @@ export default function PricingHero() {
           alt="pricing"
           width={1184}
           height={1060}
-          className="absolute object-contain overflow-visible w-[1184px] max-w-none top-0 pointer-events-none select-none"
+          className="absolute object-contain overflow-visible w-[1184px] max-w-none top-0 pointer-events-none select-none hidden lg:block"
         />
         <div className="container max-w-[67rem] flex flex-col justify-center items-center gap-10">
           <FadeInSection stagger={0.15} variant="bottom-to-top" className="w-full flex flex-col justify-center items-center">
