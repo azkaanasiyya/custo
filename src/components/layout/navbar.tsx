@@ -74,9 +74,11 @@ export default function Navbar() {
                 Contact Sales
               </Button>
             </Link>
-            <Button variant="primary" size="small" className="cursor-pointer">
-              Start for Free
-            </Button>
+            <Link href="/contact">
+              <Button variant="primary" size="small" className="cursor-pointer">
+                Start for Free
+              </Button>
+            </Link>
           </div>
 
           <div className="md:hidden">

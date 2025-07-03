@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import FadeInSection from "../animation/fadeIn";
+import Link from "next/link";
 
 export default function HomeHero() {
   return (
@@ -26,19 +27,21 @@ export default function HomeHero() {
               className="flex flex-col gap-[2rem] items-center"
             >
               <div>
-                <button
-                  className="inline-flex items-center gap-2 h-7 rounded-full px-4"
-                  style={{
-                    backgroundColor: "#FFFFFF3D",
-                    boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.06),
-                                inset 0px -1px 18px rgba(255, 255, 255, 0.4)`,
-                  }}
-                >
-                  <span className="text-s-medium text-gray-950">
-                    Introducing Custo
-                  </span>
-                  <ArrowRight size="0.75rem" />
-                </button>
+                <Link href="/about">
+                  <button
+                    className="inline-flex cursor-pointer items-center gap-2 h-7 rounded-full px-4"
+                    style={{
+                      backgroundColor: "#FFFFFF3D",
+                      boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.06),
+                                  inset 0px -1px 18px rgba(255, 255, 255, 0.4)`,
+                    }}
+                  >
+                    <span className="text-s-medium cursor-pointer text-gray-950">
+                      Introducing Custo
+                    </span>
+                    <ArrowRight size="0.75rem" />
+                  </button>
+                </Link>
               </div>
               <div className="flex flex-col gap-[1rem] text-center max-w-[55.75rem] mx-auto">
                 <div>
@@ -55,13 +58,15 @@ export default function HomeHero() {
                 </div>
               </div>
               <div className="w-full md:w-auto">
-                <Button
+                <Link href="/contact">
+                  <Button
                   variant="primary"
                   size="base"
                   className="cursor-pointer w-full"
                 >
                   Start for Free
                 </Button>
+                </Link>
               </div>
             </FadeInSection>
             <FadeInSection
