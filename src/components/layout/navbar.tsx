@@ -124,14 +124,14 @@ export default function Navbar() {
               </button>
             </div>
 
-            <div className="flex flex-col gap-5 justify-center items-center">
+            <div className="flex flex-col gap-5 justify-center items-center border-t border-grayscale-200">
               <ul
                 className="flex flex-col gap-[1rem] text-center"
                 ref={menuItemsRef}
               >
                 <li>
                   <Link href="/about" onClick={() => setIsOpen(false)}>
-                    <p className="text-[12px] leading-[160%] text-grayscale-950 py-[0.5rem]">About</p>
+                    <p className="text-[12px] leading-[160%] text-grayscale-950 py-[0.5rem] mt-5">About</p>
                   </Link>
                 </li>
                 <li>
