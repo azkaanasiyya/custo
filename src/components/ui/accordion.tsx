@@ -37,12 +37,12 @@ function AccordionTrigger({
         className={cn(
           "text-[1rem] md:text-[1.125rem] font-medium md:text-xl-medium text-grayscale-950 text-left",
           "cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start gap-[0.75rem] py-[1.25rem] transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 ",
-          "[&[data-state=open]>svg]:rotate-45",
+          "[&[data-state=open]>svg]:rotate-45 text-grayscale-950",
           className
         )}
         {...props}
       >
-        <Plus className="text-muted-foreground pointer-events-none size-[1.25rem] shrink-0 translate-y-0.5 transition-transform duration-200" />
+        <Plus className="pointer-events-none text-grayscale-950 size-[1.25rem] shrink-0 translate-y-0.5 transition-transform duration-200" />
         {children}
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
