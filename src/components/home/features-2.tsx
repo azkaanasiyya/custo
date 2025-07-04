@@ -118,25 +118,29 @@ export default function Features2() {
           </FadeInSection>
         </div>
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-[454px_1fr] gap-10 lg:gap-[92px] overflow-hidden justify-center items-start lg:items-center">
-          <FadeInSection className="relative overflow-hidden lg:w-full lg:max-h-[440px]">
-            <Image
-              src="/features/Background.png"
-              alt=""
-              width={454}
-              height={440}
-              unoptimized
-              className="overflow-hidden w-full h-full"
-            />
-            <div className="absolute top-1/2 -translate-y-1/2 flex flex-row gap-4 justify-center items-center">
-              <FadeInSection delay={0.2}>
-                <Image
-                  src="/features/img-3/Component-6.png"
-                  alt=""
-                  width={688}
-                  height={360}
-                  unoptimized
-                />
-              </FadeInSection>
+          <FadeInSection className="relative overflow-hidden w-full">
+            <div className="relative overflow-hidden lg:w-full lg:max-h-[440px]">
+              <Image
+                src="/features/Background.png"
+                alt=""
+                width={454}
+                height={440}
+                unoptimized
+                className="overflow-hidden w-full h-full"
+              />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-row gap-4 justify-center items-center">
+                <FadeInSection delay={0.2}>
+                  <div className="relative w-[327px] h-[238px] md:w-[672px] md:h-[490px] lg:w-[688px] lg:h-[360px]">
+                    <Image
+                      src="/features/img-3/Component-6.png"
+                      alt=""
+                      fill
+                      unoptimized
+                      className="object-contain"
+                    />
+                  </div>
+                </FadeInSection>
+              </div>
             </div>
           </FadeInSection>
 
@@ -151,3 +155,5 @@ export default function Features2() {
     </div>
   );
 }
+
+// className="w-[688px] h-[360px] md:w-[1024px] md:h-[600px] lg:w-full lg:h-full object-contain"

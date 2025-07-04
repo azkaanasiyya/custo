@@ -20,7 +20,7 @@ export default function Footer() {
                                 <p className="text-[12px] md:text-medium text-white opacity-[72%]">Simplify customer relationships and scale your business with Custo.</p>
                             </div>
                             <div className="flex flex-row gap-2">
-                                <a href="https://linkedin.com">
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                                     <Image src="/icon/linkedin.svg" alt="sosmed" width={24} height={24} /> 
                                 </a>
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
