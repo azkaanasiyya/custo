@@ -29,11 +29,21 @@ export default function HomeHero() {
               <div>
                 <Link href="/about">
                   <button
-                    className="inline-flex cursor-pointer items-center gap-2 h-7 rounded-full px-4"
+                    className="inline-flex cursor-pointer items-center gap-2 h-7 rounded-full px-4 transition-all duration-200 hover:scale-[1.03]"
                     style={{
                       backgroundColor: "#FFFFFF3D",
                       boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.06),
                                   inset 0px -1px 18px rgba(255, 255, 255, 0.4)`,
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#ffffff5c";
+                      (e.currentTarget as HTMLButtonElement).style.boxShadow =
+                        "0px 4px 12px rgba(0, 0, 0, 0.1), inset 0px -1px 20px rgba(255, 255, 255, 0.5)";
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#FFFFFF3D";
+                      (e.currentTarget as HTMLButtonElement).style.boxShadow =
+                        "0px 2px 8px rgba(0, 0, 0, 0.06), inset 0px -1px 18px rgba(255, 255, 255, 0.4)";
                     }}
                   >
                     <span className="text-s-medium cursor-pointer text-gray-950">
