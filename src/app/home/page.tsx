@@ -12,12 +12,25 @@ import CTA from "@/components/layout/cta";
 
 export default function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+  if (!window.location.hash) return;
+
+  const scrollToHash = () => {
+    const el = document.querySelector(window.location.hash);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      setTimeout(scrollToHash, 100); 
+    }
+  } ;
+
+  scrollToHash();
+}, []);
 
   useEffect(() => {
-    // Set loading selesai setelah komponen di-mount
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 0); // Bisa tambahkan delay jika diperlukan
+    }, 0);
 
     return () => clearTimeout(timer);
   }, []);

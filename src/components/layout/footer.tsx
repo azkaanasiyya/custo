@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import FadeInSection from "../animation/fadeIn";
 import Link from "next/link";
@@ -21,16 +23,16 @@ export default function Footer() {
                             </div>
                             <div className="flex flex-row gap-2">
                                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                                    <Image src="/icon/linkedin.svg" alt="sosmed" width={24} height={24} /> 
+                                    <Image src="/icon/linkedin.svg" alt="sosmed" width={24} height={24} className="hover:opacity-80"/> 
                                 </a>
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                    <Image src="/icon/fb.svg" alt="sosmed" width={24} height={24} />
+                                    <Image src="/icon/fb.svg" alt="sosmed" width={24} height={24} className="hover:opacity-80"/>
                                 </a>
                                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                                    <Image src="/icon/ig.svg" alt="sosmed" width={24} height={24} />
+                                    <Image src="/icon/ig.svg" alt="sosmed" width={24} height={24} className="hover:opacity-80"/>
                                 </a>
                                 <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                                    <Image src="/icon/yt.svg" alt="sosmed" width={24} height={24} />
+                                    <Image src="/icon/yt.svg" alt="sosmed" width={24} height={24} className="hover:opacity-80"/>
                                 </a>
                             </div>
                         </FadeInSection>
@@ -38,31 +40,35 @@ export default function Footer() {
                             <div className="flex flex-col gap-4">
                                 <p className="text-[14px] font-medium md:text-large text-white">Quick Links</p>
                                 <ul className="text-[12px] md:text-medium text-white opacity-[72%] space-y-3">
-                                    <li><a href="#">Benefits</a></li>
-                                    <li><a href="#">Features</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">FAQs</a></li>
+                                    <li><Link href="/home#features-1" className="hover:opacity-80">Benefits</Link></li>
+                                    <li><Link href="/home#features-2" className="hover:opacity-80">Features</Link></li>
+                                    <li><Link href="/home#testimonials" className="hover:opacity-80">Testimonials</Link></li>
+                                    <li><Link href="/home#faqs" className="hover:opacity-80">FAQs</Link></li>
                                 </ul>
                             </div>
                             <div className="flex flex-col gap-4">
                                 <p className="text-[14px] font-medium md:text-large text-white">Main Pages</p>
                                 <ul className="text-[12px] md:text-medium text-white opacity-[72%] space-y-3">
-                                    <li><a href="/home">Home</a></li>
-                                    <li><a href="/about">About</a></li>
-                                    <li><a href="/pricing">Pricing</a></li>
-                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/home" className="hover:opacity-80">Home</a></li>
+                                    <li><a href="/about" className="hover:opacity-80">About</a></li>
+                                    <li><a href="/pricing" className="hover:opacity-80">Pricing</a></li>
+                                    <li><a href="/contact" className="hover:opacity-80">Contact</a></li>
                                 </ul>
                             </div>
                             <div className="flex flex-col gap-4">
                                 <p className="text-[14px] font-medium md:text-large text-white">Other Pages</p>
                                 <ul className="text-[12px] md:text-medium text-white opacity-[72%] space-y-3">
                                     <li>
-                                        <Link href="/blog">
+                                        <Link href="/blog" className="hover:opacity-80">
                                             Blog
                                         </Link>
                                     </li>
-                                    <li><a href="#">Blog Details</a></li>
-                                    <li><a href="/404">Error 404</a></li>
+                                    <li>
+                                        <Link href="/blog" className="hover:opacity-80">
+                                            Blog Details
+                                        </Link>
+                                    </li>
+                                    <li><a href="/404" className="hover:opacity-80">Error 404</a></li>
                                 </ul>
                             </div>
                         </FadeInSection>
@@ -70,8 +76,8 @@ export default function Footer() {
                     <FadeInSection delay={0.5} className="bottom flex flex-row py-6 justify-between border-t border-white/12">
                         <p className="text-[12px] md:text-medium font-normal text-white">2025 © Custo</p>
                         <div className="flex flex-row gap-2">
-                            <a href="#" className="text-[12px] md:text-medium font-normal text-white">Get this template</a>
-                            <Image src="/icon/arrow.svg" alt="arrow" width={12} height={12} />
+                            <a href="#" className="text-[12px] md:text-medium font-normal text-white hover:opacity-80">Get this template</a>
+                            <Image src="/icon/arrow.svg" alt="arrow" width={12} height={12} className="cursor-pointer hover:opacity-80"/>
                         </div>
                     </FadeInSection>
                 </div>
