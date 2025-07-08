@@ -24,7 +24,13 @@ function StatCard({ stat, delay }: { stat: any; delay: number }) {
   const suffix = stat.value.match(/[^\d.]+$/)?.[0] || "";
 
   const [hasAnimated, setHasAnimated] = useState(false);
-  const { ref, inView } = useInView({ triggerOnce: true });
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  const shouldAnimate = inView && !hasAnimated;
 
   return (
     <FadeInSection delay={delay}>
@@ -33,11 +39,11 @@ function StatCard({ stat, delay }: { stat: any; delay: number }) {
         className="flex flex-col gap-[1.25rem] h-full border-b-[1px] border-b-grayscale-200 items-center py-[1.25rem] md:py-0"
       >
         <h2 className="font-sans font-semibold leading-[140%] text-[1.75rem] md:text-[2.25rem] lg:text-[2.5rem] md:pt-10 text-primary-500">
-          {inView && !hasAnimated ? (
+          {shouldAnimate ? (
             <CountUp
               start={0}
               end={numericValue}
-              duration={1.5}
+              duration={2}
               separator=","
               suffix={suffix}
               onEnd={() => setHasAnimated(true)}
